@@ -6,17 +6,18 @@ public class TaskVo implements Serializable{
 	private static final long serialVersionUID = 4364513886287383714L;
 	
 	private String vinCode="";
-	private String taskTime="";
+	private String orderTime="";
 	public String getVinCode() {
 		return vinCode;
 	}
 	public void setVinCode(String vinCode) {
 		this.vinCode = vinCode;
 	}
-	public String getTaskTime() {
-		return taskTime;
+	public String getOrderTime() {
+		return orderTime;
 	}
-	public void setTaskTime(String taskTime) {
-		this.taskTime = taskTime;
-	}		
+	public void setOrderTime(String orderTime) {
+		this.orderTime = orderTime;
+	}
+	
 }
