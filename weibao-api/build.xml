@@ -7,7 +7,7 @@
 
 	<property environment="env" />
 	<property name="module.home" value="." />
-	<property name="module.name" value="lab-mac-collector" />
+	<property name="module.name" value="weibao-api" />
 	<property name="module.version" value="1.0.0" />
 	<property name="module.main.src" value="${module.home}/src/main/java" />
 	<property name="module.main.resources" value="${module.home}/src/main/resources" />
