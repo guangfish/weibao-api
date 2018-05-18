@@ -1,0 +1,48 @@
+<div class="table_rows">
+    <h3>检测到经销商</h3>
+    <div class="car_detail">
+        <table>
+            <tbody>
+                <tr>
+                    <td width="100">经销商名称：</td>
+                    <td width="200" data-field="jxsname">杭州正工鸿达</td>
+                    <td width="100">经销商代码：</td>
+                    <td width="200" data-field="">	ZJ-HZ-009</td>
+                </tr>
+                <tr>
+                	<td>经销商秘钥：</td>
+                    <td colspan="3" data-field="">JXH9-JI89-DXJH-ADJD</td>
+                </tr>
+                <tr>
+                    <td>联系人：</td>
+                    <td data-field="">某某</td>
+                    <td>联系电话：</td>
+                    <td data-field="">13666666366</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<form class="normal_form dialog_box">
+    <div class="ctrl_bar">
+        <input type="hidden" id="jxsId" value="66666" />
+        <button class="btn" type="button" id="addJsxCode">添加经销商</button> 
+        <a href="#close" class="btn cancle">取消关闭</a>
+    </div>
+</form>
+<script type="text/javascript">
+$(function(){
+    $('#addJsxCode').on('click',function(){
+        var _t = $('#addJsxCode');
+        var keyId = _t.prev('input').val();
+        console.log(_t.next('a[href="#close"]'));
+        // $.getJSON("submitKey/keyid?key="+keyId,function(obj){
+            // if(obj.status==1){
+                _t.next('a[href="#close"]').trigger('click');
+            // }else{
+                // Core.Dialog.msg(obj.msg);
+            // }
+        // })
+    })
+})
+</script>

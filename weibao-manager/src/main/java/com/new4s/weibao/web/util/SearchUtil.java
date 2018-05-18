@@ -26,8 +26,8 @@ public class SearchUtil {
         HttpServletRequest request = ServletAttributes.getRequest();
         return new SearchDataVo(RequestUtil.getParameter(request, "orderField"),
             RequestUtil.getParameter(request, "orderBy"),
-            RequestUtil.getIntParameter(request, "start", 0),
-            RequestUtil.getIntParameter(request, "size", 20));
+            RequestUtil.getIntParameter(request, "page", 1),
+            RequestUtil.getIntParameter(request, "rows", 20));
     }
 
     /**

@@ -1,7 +1,7 @@
 <#if vm.getEvnVariable() == "on">
-<#assign static_domain = "http://static.guangfish.com"> 
+<#assign static_domain = "static/dist"> 
 <#else>
-<#assign static_domain = "http://static.guangfish.com"> 
+<#assign static_domain = "static/dist"> 
 </#if>
 <#assign static_version = "2018">
 
@@ -12,62 +12,34 @@
 <#include "${page}">
 </#macro>
 
-<#--插入页头 -->
-<#macro webhead>
-<@include page="common/top.ftl" />
-</#macro>
-
-<#--插入页头 -->
-<#macro webheadTmp>
-<@include page="templates/common/commonCss.ftl" />
-</#macro>
-
-<#-- -->
-<#macro webendTmp>
-<@include page="templates/common/commonJS.ftl" />
-</#macro>
-
 <#--页面头部公用部分-->
 <#macro webMenu current child>
-<div class="wrapper clearfix">
-    <div class="sidebar">
-        <div class="nav-sidebar">
-            <h2><img src="/static/images/logo2.png" style="width:156px;"></h2>
-            <ul>
-            <#local menu = vm.getMenuList() />
-            <#if (menu?exists && menu?size > 0)>
-            <#list menu as res>
-            <li<#if (res.childList?exists && res.childList?size > 0)> class="drop-down <#if current=="${res.tip?if_exists}">on</#if>"<#else><#if current=="${res.tip?if_exists}"> class="on"</#if></#if>>
-                <a href="${res.url?if_exists}">
-                    <span class="${res.icon?if_exists}"></span>
-                    <p>${res.text?if_exists}</p>
-                </a>
-                <#if (res.childList?exists && res.childList?size > 0)>
-                    <ul class="collapse">
-                    <#list res.childList as l>
-                        <li <#if child=="${l.tip?if_exists}">class="on"</#if>>
-                            <a href="${l.url?if_exists}">${l.text?if_exists}</a>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </li>
-            </#list>
-            </#if>
-            </ul>
+  <!--左侧导航-->
+  <div class="leftsidebar">
+    <#local menu = vm.getMenuList() />
+    <#if (menu?exists && menu?size > 0)>
+    <#list menu as res>
+    <div class="level_box">
+        <div class="level_tit">
+          <a href="${res.url?if_exists}" class="title_link" target="mainIframe">
+            <i class="icon ${res.icon?if_exists}"></i><span>${res.text?if_exists}</span>
+          </a>
         </div>
     </div>
-    <div class="main">
-        <div class="main-wrap">
-            <header class="clearfix">
-                <div class="head">
-                    <h1><img src="/static/images/logo4.png"></h1>
-                    <div class="head-right">
-                        <a href="javascript:;" class="user-name"><@shiro.principal /></a>
-                        <a href="javascript:;" class="sign-out" title="退出">退出</a>
-                    </div>
-                </div>
-            </header>
+    </#list>
+    </#if>
+    <div class="copy-right">
+        <p class="hv-lk"><span style="color:#c1c1c1">授权商家</span>&nbsp;|&nbsp;<span style="color:#c1c1c1">车车科技</span></p>
+        <p class="hv-lk"><a href="http://bbs.new4s.com/plugin.php?id=wq_help:wq_help" target="_blank">帮助中心</a>&nbsp;|&nbsp;<a href="http://bbs.new4s.com/forum.php?mod=forumdisplay&amp;fid=38" target="_blank">产品升级</a></p>
+        <p>copyright © 2016 new4s.com</p>
+        <p>车云版权所有</p>
+    </div>
+  </div>
+  <!--页面主体--> 
+  <div class="main fontsize0">
+    <iframe id="mainIframe" name="mainIframe" src="channel/list" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+  <i class="clearfix"></i>
 </#macro>
 
 <#--插入菜单头部 -->
@@ -147,16 +119,6 @@
 <#--插入页尾 -->
 <#macro webend>
 <@include page="common/end.ftl" />
-</#macro>
-
-<#--插入页头 -->
-<#macro webheadsearch>
-<@include page="search/top.ftl" />
-</#macro>
-
-<#--插入页尾 -->
-<#macro webendsearch>
-<@include page="search/end.ftl" />
 </#macro>
 
 <#--插入JS-->

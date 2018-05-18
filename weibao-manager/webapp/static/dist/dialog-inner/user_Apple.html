@@ -1,0 +1,29 @@
+<style>
+	.dia{
+		position:absolute;
+		bottom:10px;
+		margin-left:47px;
+	}
+	.field_text{
+		margin-left:27.5px;
+	}
+</style>
+<form class="normal_form dialog_box" style="padding-top:30px;margin-bottom:0;">
+	<div class="row" style="margin:0;">
+		<div class="field_text" style="margin:5px 0 0 0;">拒绝原因：</div>
+        <div class="field_select">
+		    <select class="z-select" name="refuseReason">
+		        <option value="1">资料不全</option>
+		        <option value="2">非本公司员工</option>
+		        <option value="3">其它</option>
+		    </select>
+		</div>
+    </div>
+    <div class="layui-layer-btn" style="margin-top:30px;margin-right:5px;">
+    	<a class="layui-layer-btn0">确定</a>
+    	<a class="layui-layer-btn1">取消</a>
+    </div>
+</form>
+<script type="text/javascript">
+	$('.z-select').zSelect();
+</script>

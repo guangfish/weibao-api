@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="google" value="notranslate" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/index.css" /> 
+    <script type="text/javascript" src="../resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/js/jquery-easyui-1.4.5/easyloader.js"></script>
+    <script type="text/javascript" src="../resource/js/wdatepicker/wdatepicker.js"></script>
+    <script type="text/javascript" src="../resource/js/layer/layer.js"></script>
+    <script type="text/javascript" src="../resource/js/z-select/zs.js"></script>
+    <script type="text/javascript" src="../resource/js/public.core.js"></script>
+    <script type="text/javascript">
+    var _staticPath = '../resource/';
+    </script>
+</head>
+<body class="autoY">
+<!--全部显示-->
+<style>
+/*临时样式*/
+h3{
+    text-indent: 20px;
+    margin: 10px 0;
+}
+a.btn-pop{
+    margin: 6px 0;
+    display: inline-block;
+    color: #7a7a7a;
+    font-weight: bold;
+    cursor: pointer;
+}
+a.btn-pop:hover{
+    color: #000000;
+}
+</style>
+<h3>弹出层</h3>
+<div style="margin: 0 20px;">
+
+<strong>在当前窗口弹出层和在外层父窗口弹出层时，弹出层中加载数据的url路径会不同</strong><br>
+<!--smallform dialog-->
+<a class="btn-pop" onclick="Core.Dialog.open({'title':'表单弹出层','width':'590px','height':'450px','url':'../dialog-inner/dialog_smallform.html'})">0.表单弹出层</a><br>
+<!--bigform-->
+<a class="btn-pop" onclick="Core.Dialog.open({'title':'大表单弹出层','width':'860px','height':'610px','url':'../dialog-inner/update.html'})">1.大表单弹出层</a><br>
+<!--bigform in top window-->
+<a class="btn-pop" onclick="Core.Dialog.open({'father':'top','width':'860px','height':'610px','title':'在父窗口中打开的大表单弹出层','url':'../dialog-inner/update.html'})">2.在父窗口中打开的大表单弹出层</a><br>
+
+<!--big iframe in top window-->
+<a class="btn-pop" onclick="Core.Dialog.open({'father':'top','width':'1000px','height':'570px','framer':'true','title':'在父窗口中打开的iframe弹出层','url':'../dialog-inner/searchlist.html'})">3.在父窗口中打开的iframe弹出层</a><br>
+<!--normal detail layer-->
+<a class="btn-pop" onclick="Core.Dialog.open({'father':'top','title':'在父窗口中打开的普通详情弹出层','width':'740px','height':'510px','url':'../dialog-inner/dialog_detail.html'})">4.普通详情弹出层</a><br>
+
+<!--confirm layer-->
+<a class="btn-pop" onclick="Core.Dialog.confirm({'title':'confirm确认层','content':'确认删除？','ok':function(cbk){cbk()},'cancel':function(){}})">5.confirm确认层</a><br>
+<!--tip layer-->
+<a class="btn-pop" onclick="Core.Dialog.note({'title':'信息','content':'一点点提示','callback':function(){}})">6.提示层</a><br>
+<!--msg layer-->
+<a class="btn-pop" onclick="Core.Dialog.msg('hello~ yo mike??')">7.msg提示层</a><br>
+</div>
+<br><br><br><br>
+<div id="fontBox" style="display:none;">哈哈哈哈哈</div>
+
+<h3>按钮</h3>
+<div style="margin: 0 20px;">
+    <button class="btn">提交</button>
+    <button class="btn cancle">取消</button>
+    <a href="#close" class="btn cancle">取消关闭</a>
+    <br><br>
+    <button class="btn btn-small">按钮</button>
+    <button class="btn btn-small cancle">取消</button>
+    <br><br>
+    <button class="btn btn-mini">按钮</button>
+    <button class="btn btn-mini cancle">取消</button>
+</div>
+<br><br><br><br>
+
+<h3>下拉框</h3>
+<div style="margin: 0 20px;">
+    <select class="z-select" data-field="mytype" name="mytype">
+        <!-- <option value="">请选择</option>
+        <option value="1">方1</option>
+        <option value="2">方2</option>
+        <option value="3">方3</option> -->
+    </select>
+</div>
+<script type="text/javascript">
+$("select.z-select").zSelect();
+$("select.z-select[data-field='mytype']").zsSetData([
+        {'text':'zsx1','value':'1'},
+        {'text':'zsx2','value':'2'},
+        {'text':'zsx3','value':'3'},
+        {'text':'zsx4','value':'4'}
+    ],{
+        valueField: 'value',
+        textField: 'text'
+    }).setZsValue('');
+</script>
+<br><br><br><br>
+
+<h3>表单</h3>
+<form class="normal_form" onsubmit="return false;" id="normalForm" style="margin-left: 50px;">
+    <!--
+        注意：form表单中 
+                require类表示必填字段
+
+                (1)input.input-text不提交本字段值时 加上disabled属性即可或者name字段为空;
+                    input.input-text不可编辑内容时 class值加上disabled类
+                (2)input日期框 不提交本字段时 disabled;
+                    input日期框不可编辑时 date-ico类去掉 class值加上disabled类
+                (3)select.z-select下拉框不可编辑时 加上data-skin="zs-disabled"属性；
+                    或者select在js中使用$('#selectid').setZsDisabled(true);
+
+    -->
+    <!-- <h3 class="h3_hr">基本信息</h3> -->
+    <div class="row">
+        <div class="field_text">输入框：</div>
+        <input id="title" type="text" name="title1" value="" class="input-text w400 require" placeholder="请输入标题">
+        <p class="colortip required_tip">说明：我是表单必填项没填时候的error提示</p>
+    </div>
+    <div class="row">
+        <div class="field_text">输入框禁止：</div>
+        <input id="title" type="text" name="title2" value="" class="input-text w400 disabled" readonly placeholder="请输入标题">
+        <!-- <p class="row_tip">说明：bababllalla</p> -->
+    </div>
+    <div class="row">
+        <div class="field_text">输入框不提交：</div>
+        <input id="title" type="text" name="title3" value="" class="input-text w400" disabled placeholder="请输入标题">
+    </div>
+    <div class="row">
+        <div class="field_text">下拉框：</div>
+        <div class="field_select">
+            <select name="selecttype1" class="z-select" data-skin="w185 require">
+                <option value="">请选择栏目类别...</option>
+                <option value="1">关于我们</option>
+                <option value="2">帮助中心</option>
+                <option value="3">买卖指南</option>
+            </select>
+        </div>
+        <div class="field_text">禁止下拉选择：</div>
+        <div class="field_select">
+            <select name="selecttype2" class="z-select" data-skin="w185 zs-disabled">
+                <option value="">请选择栏目类别...</option>
+                <option value="1">关于我们</option>
+                <option value="2">帮助中心</option>
+                <option value="3">买卖指南</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="field_text">联动下拉框：</div>
+        <div class="field_select">
+            <select class="z-select" data-skin="w185" data-style="width:100px;" name="demo_province" id="demo_province" data-prompt="请选择省份"></select>
+            <select class="z-select" data-skin="w185" name="demo_city" id="demo_city" data-prompt="请选择城市"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="field_text">单选框：</div>
+        <div class="labelrow">
+            <label><input type="radio" name="radio1" value="0" checked="checked"><span>否</span></label>
+            <label><input type="radio" name="radio1" value="1"><span>是</span></label>
+        </div>
+        <!-- <p class="row_tip">说明：bababllalla</p> -->
+    </div>
+    <div class="row">
+        <div class="field_text">禁止单选框：</div>
+        <div class="labelrow">
+            <label><input type="radio" name="radio2" value="0" disabled checked="checked"><span>否</span></label>
+            <label><input type="radio" name="radio2" value="1" disabled><span>是</span></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="field_text">多选框：</div>
+        <div class="labelrow">
+            <label><input type="checkbox" name="ra" value="1"><span>选1</span></label>
+            <label><input type="checkbox" name="ra" value="2"><span>选2</span></label>
+            <label><input type="checkbox" name="ra" value="3"><span>选3</span></label>
+            <label><input type="checkbox" name="ra" value="4"><span>选4</span></label>
+        </div>
+        <!-- <p class="row_tip">说明：bababllalla</p> -->
+    </div>
+    <div class="row">
+        <div class="field_text">日期选择咯：</div>
+        <input type="text" name="mydate" class="input-text w185 date-ico disabled" data-options="seconds:true" readonly value="2018-01-18 16:20">
+    </div>
+    <div class="row">
+        <div class="field_text">开始时间：</div>
+        <input type="text" name="startline" class="input-text w185 date-ico require" readonly value="">
+        <div class="field_text">结束时间：</div>
+        <input type="text" name="lastline" class="input-text w185 date-ico" data-options="seconds:true" readonly value="">
+    </div>
+    <div class="row">
+        <div class="field_text">textarea：</div>
+        <textarea class="input-text w400" data-field="content1" name="content1"></textarea>
+    </div>
+    <div class="row">
+        <div class="field_text">必须的备注：</div>
+        <textarea class="input-text w400 require" data-field="content2" name="content2" placeholder="请输入备注文字"></textarea>
+    </div>
+    <div class="row">
+        <div class="field_text">禁止textarea：</div>
+        <textarea class="input-text w400 disabled" readonly data-field="content3" name="content3"></textarea>
+    </div>
+    <div class="row">
+        <div class="field_text">logo图片：</div>
+        <input id="imgSrc" type="text" name="logoUrl" value="" class="input-text w400" placeholder="图片路径">
+        <div class="upload_btn"><input type="file" id="uploadBtn" value="选择文件">选择文件</div>
+        <span class="size_tip">建议图片尺寸：150*70</span>
+        <p class="row_tip" style="margin-bottom:0;">说明：显示在页面左上角的图片</p>
+        <div class="thumb_img" style="padding:10px 0 10px 95px;">
+            <img id="imgThumb" src="http://weizhanimg.new4s.com/4/2018-01/2018-01-16/yrPwSa8K3c.jpg" height="100">
+        </div>
+    </div>
+    <div class="row">
+       <div class="field_text" style="position: absolute;">内容编辑：</div>
+       <div style="padding-left: 90px;">
+            <!--顶部导航-->
+            <script type="text/javascript">window.UEDITOR_HOME_URL = "../resource/js/ueditor/";</script>
+<script src="../resource/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="../resource/js/ueditor/ueditor.all.min.js"></script>
+<script src="../resource/js/oss/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script src="../resource/js/oss/upload.js"></script>
+<script src="../resource/js/oss/oss.js"></script>
+<!-- <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>  --> 
+            <script id="container" name="content" type="text/plain">编辑器的一段文字</script>
+       </div>
+    </div>
+    <div class="row" style="padding-left: 90px;">
+        <button type="submit" class="btn sub_btn">保存设置</button>
+        <button type="reset" class="btn reset_btn">清除重置</button>
+    </div>
+</form>
+<script type="text/javascript">
+$(function(){
+    //初始化联动下拉框
+    $.zSelectGroup([{
+        elem: $('#demo_province'),
+        setValue: '3',
+        setDisabled: true,
+        valueField: 'id',
+        textField: 'name',
+        url: '../resource/jsondata/new4s_xs_province.json?level=1',
+        dataFitler: function(result) {
+            return result;
+        }
+    }, {
+        elem: $('#demo_city'),
+        setValue: '4',
+        setDisabled: true,
+        valueField: 'id',
+        textField: 'name',
+        url: '../resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        dataFitler: function(result) {
+            return result;
+        }
+    }]);
+    // setTimeout(function(){
+    //     $('#demo_province').setZsDisabled(true);
+    //     $('#demo_city').setZsDisabled(true);
+    // }, 300);
+})
+
+$(function(){
+    Core.Form.submit({
+        form: $('#normalForm'), //form
+        url: 'submit_url_xxxxx', //提交url
+        successfun: function(result){
+
+        },errorfun: function(error){
+
+        }
+    },function(form){
+        //表单验证写在此处
+        //input-text.require不能为空
+        //textarea.require不能为空
+        //select require不能不选0
+        console.log(form);
+        var _f = form, _ok = true;
+        if($('.require').length>0){
+            $('.require').each(function(_i,_t){
+                Core.Form.tips.clear(_f);
+                var _in = null;
+                _in = ($(_t).hasClass('zs-box'))? $(_t).find('input'):(($(_t).hasClass('input-text'))? $(_t):null);
+                if(_in && _in.attr('name')!='' && !Core.rule('*', $.trim(_in.val()))){
+                    Core.Form.tips.set(_in);
+                    _ok = false;
+                    return false;
+                }
+            })
+        }
+        return _ok;
+        //return false;//不能提交
+        // return true;//可以提交
+    });
+})
+</script>
+
+<script type="text/javascript" src="../resource/js/oss/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../resource/js/oss/upload.js"></script>
+<script type="text/javascript">
+// var uploader = pluploadCreate('../resource/js/oss/get.php?channel=4', 'uploadBtn', '../resource/js/oss/lib/plupload-2.1.2/', 'http://weizhanimg.new4s.com', function(imgUrl) {
+//     document.getElementById('imgThumb').src = imgUrl;
+//     document.getElementById('imgSrc').value = imgUrl;
+// }, function(err) {
+//     if(err.code == -600) {
+//         alert('选择的文件太大了');
+//     } else if(err.code == -601) {
+//         alert('请选择图片文件');
+//     } else if(err.code == -602) {
+//         alert('该文件已上传,请不要重复上传');
+//     } else {
+//         alert(err.response);
+//     }
+// });
+</script>
+<script type="text/javascript">
+$(function(){
+    UEedit = UE.getEditor('container', {
+      initialFrameWidth: 640,
+      initialFrameHeight: 400,
+      toolbars: [
+          ['source', 'undo', 'redo', 'bold' ,'italic' , 'underline', 'superscript', 'subscript', 'forecolor', 'backcolor',
+            'paragraph', 'fontfamily', 'fontsize', 'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', 'link',
+            'unlink', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'removeformat', 'image', 'fullscreen']
+      ]
+    });
+    function setUedContent(ue, str){
+        ue.addListener("ready", function () { 
+            ue.setContent(str, false);
+        })
+    }
+    //调用方法
+    // $.get('xxx',function(result){
+        setUedContent(UEedit, '1234564676786demo');
+    // })
+})
+</script>
+
+<br><br><br><br><br><br><br><br>
+
+<h3>tab内容切换</h3>
+<div style="margin: 0 20px;">
+    <div class="links tab_links" attr-tabload="auto">
+        <!--属性attr-tabload="auto"时 tabs打开默认同时加载所有内容 不设置是click点击标签时触发加载-->
+        <a href="#tboxid1">tbox1</a>
+        <a href="#tboxid2">tbox2</a>
+        <a href="#tboxid3">tbox3</a>
+        <a href="#tboxid4">tbox4</a>
+    </div>
+    <div class="tbox" id="tboxid1" tab-load="done">
+        <div style="width:100%;height:100px;padding:10px;">已有内容的tab无需load</div>
+    </div>
+    <!-- <div class="tbox" id="tboxid2" data-url="../layout/tboxdemo/tbox2.html"></div> -->
+    <div class="tbox" id="tboxid2" tab-load="done">
+        <div style="width:100%;height:100px;padding:10px;">已有内容的tab无需load222222</div>
+    </div>
+    <div class="tbox" id="tboxid3" data-url="../layout/tboxdemo/tbox3.html"></div>
+    <div class="tbox" id="tboxid4" data-url="../layout/tboxdemo/tbox4.html"></div>
+</div>
+<br><br><br><br>
+
+<h3>一级tab -链接</h3>
+<div class="switch_links links">           
+    <a data-mstate="0" href="../new4s/showlist.html" class="active"> 全部显示</a>
+    <a data-mstate="1" href="../new4s/showlist1.html"> 导入/集客</a>
+    <a data-mstate="2" href="../new4s/showlist2.html"> 清洗/邀约</a> 
+    <a data-mstate="3" href="../new4s/showlist3.html"> 转出/战败审核</a>
+    <a data-mstate="4" href="../new4s/showlist4.html"> 潜客数据库</a>
+</div>
+<br><br>
+<br>
+<h3>二级tab -链接</h3>
+<div class="ctrl_links links level_filter">
+    <a href="" class="active">全部显示</a>
+    <a href="">转出至潜客数据库</a>
+    <a href="">转出至清洗|邀约</a>
+    <a href="">战败审核</a>
+</div>
+<br><br>
+<br>
+<h3>表格操作工具栏</h3>
+<div class="ctrl_links links">
+    <a href="" id="ctrl_edit"><i class="icon add_ico"></i>添加</a>
+    <a href="" id="ctrl_edit"><i class="icon edit_ico"></i>编辑</a>
+    <a href="" id="ctrl_del"><i class="icon del_ico"></i>删除</a>
+    <a href="" id="ctrl_export"><i class="icon data_out_ico"></i>导出</a>
+
+    <span><a class="tolink">可主动转出<strong>12条</strong></a></span>
+    <span><a class="tolink">7日内强制转出<strong>12条</strong></a></span>
+    <span><a class="tolink">追踪超时<strong>12条</strong></a></span>
+    <span><a class="tolink">24小时追踪超时<strong>12条</strong></a></span>
+    <button class="btn btn-mini">查看所有</button>
+
+    <a href="" class="switch_search"><i class="icon search_ico"></i>搜索</a>
+    <a href="#datalist" class="cus_list" onclick="Core.Easyui.diyColumns.loader(this)"><i class="icon define_list_ico"></i>自定义列表</a>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $('.switch_search').trigger('click');
+})
+</script>
+
+<h3>表格搜索工具栏</h3>
+<form class="search_form" attr-rows="auto" style="display:none;" onsubmit="return false;">
+    <!-- rows_two -->
+    <div class="sc_wrap">
+        <div class="req_title">搜索条件：</div>
+        <div class="req_value">
+            <!--搜索demo-->
+            <select class="z-select search_key">
+                <!--input输入框-->
+                <option value="uname">客户姓名</option>
+                <option value="phone">手机号码</option>
+                <!--select下拉框-->
+                <option value="state">线索状态</option>
+                <option value="infotype">信息类型</option>
+                <option value="iseries">选购车系</option>
+                <option value="dseries">提车车系</option>
+                <!--下拉框二级联动三级联动-->
+                <option value="province-city">省份-城市</option>
+                <option value="brand-series-spec">品牌-车系-车型</option>
+            </select>
+        </div>
+        
+        <div class="req_value search_write_box" attr-box>
+            <input class="input-text search_write" placeholder="请输入关键词" />
+        </div>
+        <div class="req_value disn search_select_box" attr-box>
+            <select class="z-select search_select"></select>
+        </div>
+        <div class="req_value disn search_group_box search-province-city" attr-box>
+            <select class="z-select" data-fname="province" data-prompt="请选择省份"></select>
+            <select class="z-select" data-fname="city" data-prompt="请选择城市"></select>
+        </div>
+        <div class="req_value disn search_group_box search-brand-series-spec" attr-box>
+            <select class="z-select" data-fname="brand" data-prompt="请选择品牌"></select>
+            <select class="z-select" data-fname="series" data-prompt="请选择车系"></select>
+            <select class="z-select" data-fname="spec" data-prompt="请选择车型"></select>
+        </div>
+        <a class="add_req">添加条件</a>
+        <div class="auto-timelist">
+            <hr class="border"/>
+            <div class="req_value">
+                <select class="z-select time_select">
+                    <option value="posttime">提交时间</option>
+                    <option value="invitetime">预约时间</option>
+                    <option value="firstarrivetime">首次到店时间</option>
+                    <option value="remindetime">预约下次时间</option>
+                    <option value="followtime">最后追踪回访时间</option>
+                    <option value="dateline">建档时间</option>
+                    <option value="arrivetime">客户来店时间</option>
+                    <option value="endtime">预订成交时间</option>
+                    <option value="delivertime">提车时间</option>
+                </select>
+            </div>
+            <div class="req_value">
+                <input class="input-text date-ico start-time" name="posttime[0]" onclick="WdatePicker()" readonly  placeholder="开始时间" />
+            </div>
+            <div class="req_value date_middle">至</div>
+            <div class="req_value">
+                <input class="input-text date-ico end-time" name="posttime[1]" onclick="WdatePicker()" readonly placeholder="结束时间" />
+            </div>
+        </div>
+        <button class="search_btn btn btn-small">搜索</button>
+    </div>
+    <div class="search_list disn">
+        <hr class="border" />
+        <div class="req_list">
+            <div class="req_title">筛选条件：</div>
+            <ul></ul>
+            <a class="clear_all"><i class="clear_ico icon"></i>全部清除</a>
+        </div>
+        <div class="req_tips">注：最多只能增加5个筛选条件</div>
+    </div>
+</form>
+
+
+
+<h3>easyui表格-可自定义宽高</h3>
+<div class="table_box">
+    <table class="table_main" id="datalist" data-columnskey="index"></table>
+</div>
+<script type="text/javascript" src="../resource/js/default.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+Core.Easyui.FieldColumn = [
+    {field:'posttime',title:'提交时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'infotypename',title:'信息类型',width:100,align:'center',sortable:true},
+    {field:'infoplacename',title:'信息渠道',width:100,align:'center',sortable:true},
+    {field:'infosourcename',title:'信息来源',width:100,align:'center',sortable:true},
+    {field:'effective',title:'有效性判断',width:70,align:'center',formatter:function(value,row,index){
+        return ['...','<i class="yes-ico"></i>', '<i class="no-ico"></i>'][value] || '';
+    }},
+    {field:'sex',title:'性别',width:45,align:'center',sortable:true,formatter:function(value,row,index){
+        return ['-','<i class="men-ico" title="男"></i>','<i class="women-ico" title="女"></i>'][value] || '';
+    }},
+    {field:'phoneaddr',title:'号码归属地',width:100,align:'center',sortable:true},
+    {field:'licenceplate',title:'拟上本地牌',width:80,align:'center',formatter:function(value,row,index){
+        return ['-','<i class="yes-ico"></i>', '<i class="no-ico"></i>'][value] || '';
+    }},
+    {field:'ownername',title:'线索拥有者',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return !parseInt(row.owneruid) && (parseInt(row.state)>=1 && parseInt(row.state)<=10) ? "<a href='javascript:void(0);' onclick='Core.Sys.Action(\"take.over\",this);' data-tid='"+row.tid+"' class='receive'>接收</a>" : value;
+    }},
+    {field:'competitorname',title:'竞品信息',width:100,align:'center'},
+    {field:'tracktagname',title:'标签',width:100,align:'center'},
+    {field:'brandname',title:'拟购品牌',width:80,align:'center'},
+    {field:'specname',title:'拟购车型',width:100,align:'center'},
+    {field:'ibuytimename',title:'拟购时间',width:100,align:'center',sortable:true},
+    {field:'price',title:'报价',width:100,align:'center'},
+    {field:'slogan',title:'促销内容',width:120,align:'center'},
+    {field:'content',title:'备注',width:350,align:'center'}
+];
+Core.Easyui.FrozenColumn = [
+    {field:'ck',checkbox:true},
+    {field:'action',title:'操作',width:40,align:'center',formatter:function(value,row,index){
+        return '<a onclick="Core.Sys.Action(\'popfollow\',\''+row.tid+'\')"><i class="show-detail-ico"></i></a>';
+    }},
+    {field:'state',title:'线索状态',width:100,align:'center',formatter:function(value,row,index){
+    if ($.inArray(value,['1','2','3','4','5','10']) != -1){
+        return '<span>'+(['-','导入|集客','清洗|邀约','到店|洽谈','追踪|促成','预订|成交','-','-','-','-','提车|回访'][value] || '')+'</span>';
+        // return '<span '+Core.Sys.Archive(value,row.posttime[1],['forced','voluntary'],row.customerlevel)+'>'+(['-','导入|集客','清洗|邀约','到店|洽谈','追踪|促成','预订|成交','-','-','-','-','提车|回访'][value] || '')+'</span>';
+    } else {
+        var As = {'21' : '转出待审','22' : '转出待审','23' : '战败待审','31' : '转出潜客','32' : '战败潜客','33' : '无效潜客'}
+        return As[value.toString()];
+    }
+    }},
+    {field:'uname',title:'客户姓名',width:80,align:'center'},
+    {field:'phone',title:'手机号码',width:130,align:'center',sortable:true},
+    {field:'seriesname',title:'拟购车系',width:100,align:'center',sortable:true}
+];
+Core.Easyui.init({
+    grid: $('#datalist'), //datagrid table
+    sbar: $('.search_form'), //datagrid search form
+},Core.Easyui.FieldColumn,{
+    width: '100%',
+    height: '300px',
+    idField: 'bid',
+    fitColumns: false,
+    frozenColumns: [Core.Easyui.FrozenColumn],
+    onLoadSuccess:function(data){ 
+        console.log(data);
+    },
+    onLoadError:function(){ 
+        console.log('error');
+    },
+    onSortColumn:function (sort, order) {
+        try{
+            // Core.Easyui.Params.sort(sort,order);
+        }catch(e){
+
+        }
+    },
+    onClickRow:function(index,row){
+        // $(this).datagrid('clearSelections');
+        // $(this).datagrid('selectRow',index);
+    },
+    onDblClickRow : function(index,row){
+        // Core.Sys.Action('pop',row.tid);
+    }
+});
+
+Core.Easyui.get('../resource/jsondata/new4s_showlist.json');
+
+$(document).ready(function(){
+    //搜索工具栏内有联动下拉
+    var CombDown = {
+        tag: false,
+        list: [{
+            "box": "province-city", //省份城市
+            "valueField": "id",
+            "textField": "name",
+            "url": "../resource/jsondata/new4s_xs_province.json"
+        },{
+            "box": "brand-series-spec", //品牌 车系 车型
+            "valueField": "id",
+            "textField": "name",
+            "url": "../resource/jsondata/new4s_xs_series.json"
+        }],
+        init: function(_v){
+            var m = CombDown.list.map(function(v,k){ return v["box"]; });
+            var x = $.inArray(_v,m);
+            if(x<0) {return;}
+            CombDown.tag = true;
+            var arr = _v.split('-');
+            var optArr = [];
+            for(var r in arr){
+                optArr.push({
+                    elem: $('select[data-fname='+arr[r]+']'),
+                    valueField: CombDown.list[x]['valueField'],
+                    textField: CombDown.list[x]['textField'],
+                    url: CombDown.list[x]['url']+'?'+(r>0?'parentid=@parentValue':''),
+                    dataFitler: function(result) { return result; }
+                })
+            }
+            $.zSelectGroup(optArr);
+        },
+    }
+  
+    //搜索工具栏-下拉框选择搜索类型
+    $('.search_form').on('setZsValue','.search_key',function(){
+        var _f = $(this).parents('form');
+        var _key = $(this).getZsValue();
+
+        var sField = {};
+        CombDown.tag = false;
+        if($.inArray(_key,['state'])!=-1){
+            sField = {'valueField': 'id','textField': 'name','url': '../resource/jsondata/new4s_xs_state.json'};
+        }else if($.inArray(_key,['infotype'])!=-1){
+            sField = {'valueField': 'id','textField': 'title','url': '../resource/jsondata/new4s_xs_infotype.json'};
+        }else if($.inArray(_key,['iseries','dseries'])!=-1){
+            sField = {'valueField': 'id','textField': 'name','url': '../resource/jsondata/new4s_xs_series.json'};
+        }
+
+        _f.find('.req_value[attr-box]').addClass('disn');
+        if(sField['url']){
+            //url存在是下拉框select
+            _f.find('.search_select_box').removeClass('disn');
+            _f.find('.search_select_box').find('.search_select').zsLoadData(sField).setZsValue('');
+        }else{
+            //联动下拉框
+            CombDown.init(_key);
+            if(CombDown.tag){ 
+                _f.find('.search-'+_key).removeClass('disn');
+                return;
+            }
+            //input
+            _f.find('.search_write_box').removeClass('disn');
+            _f.find('.search_write_box').find('input.search_write').val('');
+        }
+    })
+
+    //选择日期类型
+    $('.search_form').on('setZsValue','.time_select',function(){
+        var _f = $(this).parents('form');
+        var _key = $(this).getZsValue();
+        _f.find('.start-time').attr('name',_key+'[0]');
+        _f.find('.end-time').attr('name',_key+'[1]');
+    });
+
+});
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+ <head>
+  <meta name="google" value="notranslate" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" />
+  <title></title> 
+  <script type="text/javascript">
+  var _staticPath = '../resource/';
+  </script>
+  <link rel="stylesheet" type="text/css" href="../resource/css/index.css" /> 
+  <script type="text/javascript" src="../resource/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../resource/js/jquery-easyui-1.4.5/easyloader.js"></script>
+  <script type="text/javascript" src="../resource/js/wdatepicker/wdatepicker.js"></script>
+  <script type="text/javascript" src="../resource/js/layer/layer.js"></script>
+  <script type="text/javascript" src="../resource/js/z-select/zs.js"></script>
+  <script type="text/javascript" src="../resource/js/public.core.js"></script>
+  
+<!--B01-1-1全部列表-->
+<form class="search_form" onsubmit="return false;">
+    <div class="sc_wrap" style="min-width:auto;">
+        <div class="req_title">搜索条件：</div>
+        <div class="req_value">
+            <input class="input-text" name="keywords" placeholder="请输入关键词" style="width: 300px;" />
+        </div>
+    </div>
+    <button class="search_btn btn btn-small">搜索</button>
+    <a class="btn btn-mini" style="margin:2px 0 0 15px;width:100px;" href="../new4s/b01-1-2.html">创建追踪任务</a>
+</form>    
+
+<div class="table_box">
+    <table class="table_main" id="allDatalist" data-columnskey="alldata"></table>
+</div>
+<script type="text/javascript" src="../resource/js/default.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+Core.Easyui.FieldColumn = [
+    {field:'name',title:'经销商名称',width:100,align:'center'},
+    {field:'area',title:'销售区域',width:80,align:'center'},
+    {field:'part',title:'商代处',width:80,align:'center'},
+    {field:'part2',title:'事业部',width:80,align:'center'},
+    {field:'dataa',title:'可主动转出线索数',width:100,align:'center',formatter:function(value,row,index){return '<a href="" class="col_23a8eb">'+value+'</a>';}},
+    {field:'datab',title:'7日内强制转出线索数',width:100,align:'center',formatter:function(value,row,index){return '<a href="" class="col_23a8eb">'+value+'</a>';}},
+    {field:'datac',title:'追踪超时线索数',width:100,align:'center',formatter:function(value,row,index){return '<a href="" class="col_23a8eb">'+value+'</a>';}},
+    {field:'datad',title:'24小时追踪超时线索数',width:100,align:'center',formatter:function(value,row,index){return '<a href="" class="col_23a8eb">'+value+'</a>';}},
+];
+Core.Easyui.init({
+    grid: $('#allDatalist'), //datagrid table
+    sbar: $('.search_form'), //datagrid search form
+},Core.Easyui.FieldColumn,{
+    idField: 'bid',
+    fitColumns: true,
+    frozenColumns: [Core.Easyui.FrozenColumn],
+    onLoadSuccess:function(data){ 
+        Core.Easyui.resize();
+    }
+});
+
+Core.Easyui.get('../resource/jsondata/new4s_alllist.json');
+
+</script>

@@ -1,0 +1,967 @@
+2018-05-15 08:55:07,479 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 08:55:07,872 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 08:55:07,923 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 08:55:07,924 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 08:55:07,940 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 08:55:07,945 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 08:55:09,747 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 08:55:09,753 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 08:55:09,766 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 08:56:15,764 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 08:56:15,847 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 08:56:15,906 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 08:56:15,908 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 08:56:15,917 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 08:56:15,920 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 08:56:16,935 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 08:56:16,938 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 08:56:16,947 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 08:56:21,989 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select '0' `status`,count(*) total FROM yq_order WHERE `status`=0 union all select '1' `status`,count(*) total FROM yq_order WHERE `status`=1 union all select '2' `status`,count(*) total FROM yq_order WHERE `status`=2 union all select '3' `status`,count(*) total FROM yq_order WHERE `status`=3 union all select '4' `status`,count(*) total FROM yq_order WHERE `status`=4 union all select '5' `status`,count(*) total FROM yq_order WHERE `status`=5 
+2018-05-15 08:56:21,991 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 08:56:22,006 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 09:09:03,035 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 09:09:03,104 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 09:09:03,155 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 09:09:03,162 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 09:09:03,180 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 09:09:03,183 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:09:04,155 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 09:09:04,158 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:09:04,187 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:09:06,165 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:09:06,167 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:09:06,436 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:19:57,728 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 09:19:57,807 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 09:19:57,868 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 09:19:57,870 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 09:19:57,879 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 09:19:57,883 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:19:58,785 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 09:19:58,789 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:19:58,797 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:20:00,248 DEBUG [qtp1433867275-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:20:00,250 DEBUG [qtp1433867275-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:20:00,313 DEBUG [qtp1433867275-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:22:15,625 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 09:22:15,632 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:22:15,647 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:22:16,858 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:22:16,864 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:22:16,869 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:22:49,247 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 09:22:49,251 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:22:49,258 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:22:51,267 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:22:51,269 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:22:51,272 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:25:57,425 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 09:25:57,517 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 09:25:57,584 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 09:25:57,586 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 09:25:57,598 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 09:25:57,601 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:25:58,460 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 09:25:58,462 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:25:58,472 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:26:00,631 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:26:00,638 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:26:00,650 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:26:05,582 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:26:05,585 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:26:05,588 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:26:07,139 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:26:07,146 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:26:07,151 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 09:26:09,933 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 09:26:09,936 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 09:26:09,942 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:44:53,355 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 10:44:53,433 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 10:44:53,493 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 10:44:53,495 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 10:44:53,506 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 10:44:53,510 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:44:54,558 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 10:44:54,562 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:44:54,573 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:44:56,183 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:44:56,184 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:44:56,225 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:44:56,823 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:44:56,827 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:44:56,841 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:45:50,282 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:45:50,287 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:45:50,291 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:45:50,935 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:45:50,937 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:45:50,950 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:46:46,977 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 10:46:46,980 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:46:46,986 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:46:48,674 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:46:48,676 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:46:48,682 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:46:49,097 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:46:49,099 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:46:49,114 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:47:04,284 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:47:04,286 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:47:04,289 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:47:04,970 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:47:04,973 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:47:04,981 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:47:24,863 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:47:24,864 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:47:24,872 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:48:09,289 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:48:09,291 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:48:09,300 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:48:48,754 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:48:48,756 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:48:48,759 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:48:49,287 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:48:49,295 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:48:49,308 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:49:07,045 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:49:07,048 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:49:07,057 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:50:08,518 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:50:08,519 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:50:08,522 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:50:09,030 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:50:09,032 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:50:09,044 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:50:29,224 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:50:29,226 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:50:29,228 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:50:29,681 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:50:29,683 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:50:29,690 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:52:56,652 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:52:56,652 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:52:56,672 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:52:58,190 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:52:58,192 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:52:58,213 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:53:45,946 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:53:45,947 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:53:45,971 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:54:37,878 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 10:54:37,880 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:54:37,889 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:54:39,620 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:54:39,621 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:54:39,632 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:54:40,261 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:54:40,264 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:54:40,270 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:54:45,661 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:54:45,662 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:54:45,667 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:55:09,583 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:55:09,586 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:55:09,595 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:56:10,252 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 10:56:10,326 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 10:56:10,389 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 10:56:10,391 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 10:56:10,403 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 10:56:10,407 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:56:11,492 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 10:56:11,495 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:56:11,503 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:56:12,778 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:56:12,780 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:56:12,847 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:56:13,450 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:56:13,452 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:56:13,496 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:56:17,358 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:17,362 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 10:56:17,368 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:56:25,982 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:25,983 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:56:25,993 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:56:29,761 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:29,763 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 5(String)
+2018-05-15 10:56:29,768 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:56:32,285 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:32,287 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 10:56:32,292 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:56:34,550 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:34,553 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 3(String)
+2018-05-15 10:56:34,558 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:56:38,732 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:38,735 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:56:38,751 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:56:45,904 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:56:45,906 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:56:45,917 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:57:02,237 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:57:02,240 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:57:02,249 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:57:36,503 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:57:36,504 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:57:36,513 DEBUG [qtp1433867275-14] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:58:26,937 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 10:58:27,029 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 10:58:27,081 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 10:58:27,084 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 10:58:27,118 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 10:58:27,121 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:58:29,430 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 10:58:29,431 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:58:29,439 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:58:29,941 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 10:58:29,945 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:58:29,949 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 10:58:31,046 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 10:58:31,050 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 10:58:31,063 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 10:58:39,869 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 10:58:39,873 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 10:58:39,882 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:58:44,866 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:58:44,868 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String), 2018-05-15(String), 2018-05-16(String)
+2018-05-15 10:58:45,122 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:59:02,682 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:02,684 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:02,701 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:59:08,204 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:08,207 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:08,213 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:59:11,069 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:11,071 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 3(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:11,075 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:59:13,944 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:13,947 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 4(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:13,951 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:59:16,425 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:16,430 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:16,439 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 10:59:19,707 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:19,708 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 5(String), 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:19,712 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 10:59:31,719 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 10:59:31,721 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-01-15(String), 2018-05-16(String)
+2018-05-15 10:59:31,731 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:00:13,227 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 11:00:13,229 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-01-15(String), 2018-05-16(String)
+2018-05-15 11:00:13,237 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:02:11,825 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 11:02:11,911 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 11:02:11,970 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 11:02:11,973 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 11:02:11,984 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 11:02:11,991 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:02:14,031 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:02:14,035 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:02:14,132 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:02:14,467 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 11:02:14,475 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:02:14,482 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:02:15,598 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:02:15,600 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:02:15,639 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:02:28,256 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like '%?%' 
+2018-05-15 11:04:48,234 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 11:04:48,318 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 11:04:48,379 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 11:04:48,381 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 11:04:48,413 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 11:04:48,421 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:04:51,063 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 11:04:51,065 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:04:51,071 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:04:51,074 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:04:51,159 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:04:51,230 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:04:52,481 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:04:52,485 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:04:52,500 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:05:00,067 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like '%'?'%' 
+2018-05-15 11:05:00,070 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 11:05:00,073 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 11:09:06,016 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 11:09:06,110 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 11:09:06,181 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 11:09:06,183 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 11:09:06,208 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 11:09:06,224 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:09:08,291 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:09:08,294 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:09:08,386 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:09:09,930 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:09:09,932 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:09:09,949 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:13:02,828 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 11:13:02,921 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 11:13:02,986 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 11:13:02,987 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 11:13:03,013 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 11:13:03,028 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:13:05,265 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:13:05,267 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:13:05,274 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:13:06,942 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:13:06,945 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:13:06,961 DEBUG [qtp1433867275-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:13:12,549 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 11:13:12,552 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 11:13:12,593 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 11:13:27,322 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 11:13:27,327 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 1234(String)
+2018-05-15 11:13:27,334 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:13:30,595 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 11:13:30,597 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 234(String)
+2018-05-15 11:13:30,611 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 11:13:36,861 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 11:13:36,863 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 11:13:36,871 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 11:13:39,651 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 11:13:39,653 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 11:13:39,656 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 11:13:44,885 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:13:44,887 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:13:44,893 DEBUG [qtp1433867275-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:13:46,007 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:13:46,009 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:13:46,018 DEBUG [qtp1433867275-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 11:21:47,040 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 11:21:47,041 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:21:47,044 DEBUG [qtp1433867275-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 11:21:47,808 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 11:21:47,812 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 11:21:47,820 DEBUG [qtp1433867275-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:00:30,953 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 14:00:31,020 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 14:00:31,072 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 14:00:31,073 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 14:00:31,082 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 14:00:31,086 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:00:32,121 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:00:32,123 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:32,157 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:00:33,060 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:00:33,065 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:33,241 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:00:33,801 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:00:33,804 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:33,816 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:00:45,826 DEBUG [qtp1129670968-33] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:00:45,830 DEBUG [qtp1129670968-33] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:45,836 DEBUG [qtp1129670968-33] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:00:46,230 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:00:46,233 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:46,245 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:00:59,501 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:00:59,502 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:59,506 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:00:59,860 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:00:59,863 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:00:59,879 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:01:07,142 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:01:07,144 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:01:07,148 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:01:07,539 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:01:07,543 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:01:07,557 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:04:37,075 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:04:37,077 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:04:37,080 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:04:37,727 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:04:37,730 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:04:37,738 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:04:39,037 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:04:39,040 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:04:39,051 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:05:50,746 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 14:05:50,813 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 14:05:50,870 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 14:05:50,872 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 14:05:50,886 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 14:05:50,893 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:05:51,727 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:05:51,729 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:05:51,735 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:05:54,325 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:05:54,331 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:05:54,453 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:05:55,064 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:05:55,068 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:05:55,082 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:05:56,780 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:05:56,782 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:05:56,793 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:09:19,657 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:09:19,658 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:09:19,661 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:09:20,142 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:09:20,146 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:09:20,163 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:09:21,632 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:09:21,634 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:09:21,645 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:10:31,645 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:10:31,647 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:10:31,654 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:10:33,427 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:10:33,428 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:10:33,431 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:10:33,857 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:10:33,860 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:10:33,869 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:11:45,621 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:11:45,623 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:11:45,627 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:11:46,544 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:11:46,545 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:11:46,554 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:12:16,236 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:12:16,237 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:12:16,246 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:14:36,193 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:14:36,197 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:14:36,204 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:14:36,864 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:14:36,867 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:14:36,870 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:14:37,792 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:14:37,794 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:14:37,800 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:14:44,559 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:14:44,560 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:14:44,571 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:19:13,672 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:19:13,674 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:19:13,678 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:19:14,716 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:19:14,718 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:19:14,725 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:19:22,406 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:19:22,408 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:19:22,415 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:22:22,134 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:22:22,136 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:22:22,141 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:22:22,966 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:22:22,968 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:22:22,973 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:22:23,756 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:22:23,758 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:22:23,765 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:22:32,112 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:22:32,114 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:22:32,125 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:22:39,638 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:22:39,640 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:22:39,658 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:24:26,823 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:24:26,824 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:24:26,827 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:24:27,843 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:24:27,845 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:24:27,852 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:24:42,416 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:24:42,417 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-21(String)
+2018-05-15 14:24:42,420 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:26:16,994 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:26:16,997 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:26:17,002 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:26:18,374 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:26:18,375 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:26:18,379 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:26:18,805 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:26:18,809 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:26:18,816 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:26:39,201 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 14:26:39,202 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 14:26:39,210 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 14:26:46,955 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:26:46,957 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:26:46,965 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:27:41,194 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 14:27:41,195 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 14:27:41,202 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 14:35:18,696 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 14:35:18,699 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 14:35:18,706 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 14:35:22,333 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:35:22,335 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:35:22,343 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:37:51,962 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:37:51,963 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:37:51,970 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:37:53,489 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:37:53,490 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:37:53,493 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:37:53,891 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:37:53,894 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:37:53,901 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:38:21,858 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:38:21,863 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-16(String)
+2018-05-15 14:38:21,869 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:40:55,196 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:40:55,198 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:40:55,204 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:40:56,515 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:40:56,516 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:40:56,519 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:40:56,928 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:40:56,930 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:40:56,940 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:41:11,385 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:41:11,387 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String), 2018-05-15(String), 2018-05-16(String)
+2018-05-15 14:41:11,393 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:41:32,161 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:41:32,162 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-16(String)
+2018-05-15 14:41:32,166 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:41:40,613 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:41:40,615 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:41:40,618 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:41:41,235 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:41:41,246 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:41:41,259 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:41:49,195 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:41:49,197 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String), 2018-05-15(String), 2018-05-16(String)
+2018-05-15 14:41:49,204 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:42:06,924 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') 
+2018-05-15 14:42:06,926 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-16(String)
+2018-05-15 14:42:06,929 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:46:06,425 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 14:46:06,428 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 14:46:06,433 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 14:46:06,435 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 14:46:06,441 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 14:46:06,443 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:46:07,193 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:46:07,196 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:46:07,208 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:46:08,561 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:46:08,562 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:46:08,565 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:46:08,913 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:46:08,915 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:46:08,923 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:48:49,092 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:48:49,093 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:48:49,096 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:48:50,126 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:48:50,128 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:48:50,135 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:49:04,213 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:49:04,215 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:49:04,219 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:49:07,626 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 14:49:07,628 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 14:49:07,633 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 14:49:14,652 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:49:14,654 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:49:14,660 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:49:54,986 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:49:54,986 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:49:54,989 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:49:55,577 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:49:55,580 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:49:55,586 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:50:02,583 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 14:50:02,585 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 14:50:02,591 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 14:50:08,260 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:50:08,263 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:50:08,271 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:50:20,482 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:50:20,483 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:50:20,486 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:50:21,145 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:50:21,148 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:50:21,153 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:51:27,321 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:51:27,322 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:51:27,325 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:51:27,775 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:51:27,782 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:51:27,787 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:56:59,254 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:56:59,255 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:56:59,262 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:57:00,822 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:57:00,823 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:57:00,825 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:57:01,255 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:57:01,258 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:57:01,264 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:57:41,753 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 14:57:41,755 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:57:41,760 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:57:43,036 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:57:43,037 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:57:43,042 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:57:43,428 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:57:43,430 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:57:43,437 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:57:53,411 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 14:57:53,413 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 14:57:53,418 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 14:58:08,269 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 14:58:08,270 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 14:58:08,274 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 14:58:41,092 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:58:41,094 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:58:41,099 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:58:46,752 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 14:58:46,756 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 14:58:46,763 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:58:51,604 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 14:58:51,606 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜(String)
+2018-05-15 14:58:51,610 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 14:58:55,372 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 14:58:55,374 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 14:58:55,380 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:59:29,582 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 14:59:29,583 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:59:29,585 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 14:59:30,101 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 14:59:30,104 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 14:59:30,110 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 14:59:33,347 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 14:59:33,350 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 14:59:33,355 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 15:04:02,331 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:04:02,332 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:04:02,335 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:04:02,824 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:04:02,829 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:04:02,838 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:04:41,641 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:04:41,643 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:04:41,646 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:04:42,202 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:04:42,206 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:04:42,212 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:04:46,685 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:04:46,687 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 15:04:46,692 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 15:04:54,524 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:04:54,527 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 2(String)
+2018-05-15 15:04:54,530 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 15:05:08,469 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:05:08,471 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 15:05:08,476 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 15:05:16,556 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:05:16,558 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 15:05:16,622 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 15:06:00,946 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 15:06:00,948 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 15:06:00,953 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 15:06:22,815 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:06:22,820 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:06:22,823 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:06:23,453 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:06:23,458 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:06:23,463 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:06:35,093 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:06:35,094 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:06:35,097 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:06:35,533 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:06:35,537 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:06:35,544 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:07:03,071 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:07:03,072 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:07:03,074 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:07:03,490 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:07:03,494 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:07:03,500 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:07:13,546 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 15:07:13,547 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 15:07:13,551 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:07:17,398 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 15:07:17,401 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜(String)
+2018-05-15 15:07:17,405 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 15:07:19,648 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 15:07:19,650 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 15:07:19,657 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:07:21,322 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.channel_name = ? 
+2018-05-15 15:07:21,323 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 15:07:21,328 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:07:44,359 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 15:07:44,361 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 15:07:44,365 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 15:07:46,206 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.vin like concat(concat("%",?),"%") 
+2018-05-15 15:07:46,207 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 123(String)
+2018-05-15 15:07:46,245 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 4
+2018-05-15 15:08:02,406 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:08:02,408 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 15:08:02,420 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 15:08:07,250 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 and c.status = ? 
+2018-05-15 15:08:07,251 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 0(String)
+2018-05-15 15:08:07,255 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 6
+2018-05-15 15:10:33,409 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 15:10:33,412 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:10:33,417 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:23:16,666 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:23:16,667 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:23:16,670 DEBUG [qtp1129670968-12] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:23:17,048 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 
+2018-05-15 15:23:17,051 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:23:17,056 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:36:34,722 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 15:36:34,800 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 15:36:34,864 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 15:36:34,868 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 15:36:34,916 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 15:36:34,920 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:36:35,865 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 15:36:35,867 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:36:35,875 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:36:41,047 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:36:41,053 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:36:41,156 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:36:41,733 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 15:36:41,735 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:36:41,748 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:36:45,189 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:36:45,191 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:36:45,195 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:37:53,450 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 15:37:53,452 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:37:53,458 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:37:54,606 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:37:54,607 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:37:54,611 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:37:55,052 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 15:37:55,055 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:37:55,065 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:38:02,649 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:38:02,651 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:02,654 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:38:49,538 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 15:38:49,617 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 15:38:49,679 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 15:38:49,681 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 15:38:49,691 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 15:38:49,695 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:38:50,637 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 15:38:50,641 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:50,650 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:38:52,179 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:38:52,184 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:52,235 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:38:56,118 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:38:56,120 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:56,123 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 15:38:56,646 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 15:38:56,649 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:56,663 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 15:38:59,430 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 15:38:59,431 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 15:38:59,434 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:14,242 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 16:41:14,328 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 16:41:14,438 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 16:41:14,441 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 16:41:14,463 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 16:41:14,471 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:15,937 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:41:15,940 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:15,949 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:16,266 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:41:16,268 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:16,386 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:16,986 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:41:16,989 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:17,019 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:41:36,954 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:41:36,957 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:36,961 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:37,440 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 16:41:37,443 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:37,458 DEBUG [qtp1129670968-31] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 16:41:39,289 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:41:39,297 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:39,301 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:41:39,729 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:41:39,732 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:41:39,739 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:43:15,336 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 16:43:15,420 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 16:43:15,502 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 16:43:15,505 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 16:43:15,533 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 16:43:15,537 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:43:16,668 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:43:16,670 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:43:16,680 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:43:17,759 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:43:17,761 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:43:17,827 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:43:18,428 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:43:18,432 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:43:18,439 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:44:20,669 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:44:20,673 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:44:20,681 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:44:21,137 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:44:21,138 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:44:21,142 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:44:21,577 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:44:21,583 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:44:21,590 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:44:38,339 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:44:38,342 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:44:38,357 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:45:06,373 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and c.create_time >= DATE_FORMAT(?,'%Y-%m-%d') and c.create_time <= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:45:06,375 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-16(String)
+2018-05-15 16:46:32,313 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 16:46:32,380 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 16:46:32,441 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 16:46:32,444 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 16:46:32,460 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 16:46:32,463 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:46:33,293 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:46:33,296 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:46:33,306 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:46:35,111 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:46:35,112 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:46:35,259 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:46:35,827 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:46:35,830 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:46:35,836 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:46:43,796 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:46:43,810 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:46:43,817 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:46:53,465 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:46:53,467 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:46:53,477 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:47:47,577 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:47:47,579 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:47:47,582 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:47:48,211 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:47:48,214 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:47:48,223 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:48:02,348 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and channel_name = ? GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id 
+2018-05-15 16:48:02,351 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 16:51:25,952 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 16:51:26,018 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 16:51:26,070 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 16:51:26,073 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 16:51:26,083 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 16:51:26,089 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:51:27,027 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:51:27,029 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:51:27,045 DEBUG [qtp1129670968-17] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:51:27,962 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:51:27,964 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:51:28,120 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:51:28,732 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c 
+2018-05-15 16:51:28,737 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:51:28,744 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:51:36,262 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c and c.channel_name = ? 
+2018-05-15 16:51:36,269 DEBUG [qtp1129670968-16] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 16:52:43,827 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select t1.id, t1.`username`, t1.`password`, t1.`status`,t2.id as userinf_id from sys_user t1,sys_user_detail t2 where t1.id = t2.user_id and t1.username = ? 
+2018-05-15 16:52:43,900 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: admin@adbest.com(String)
+2018-05-15 16:52:43,968 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====>  Preparing: select distinct t1.* from sys_menu t1, sys_role_menu t2 where t1.id = t2.menu_id and t1.platform = 1 and t1.display = 'y' and exists ( select t3.id from sys_user t3, sys_user_role t4 where t3.id = t4.user_id and t4.role_id = t2.role_id and t4.platform = 1 and t3.username = ? ) order by t1.id asc 
+2018-05-15 16:52:43,969 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ====> Parameters: admin@adbest.com(String)
+2018-05-15 16:52:43,985 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <====      Total: 2
+2018-05-15 16:52:43,990 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:52:45,038 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:52:45,039 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:52:45,049 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:52:45,745 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:52:45,747 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:52:45,777 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:52:46,367 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:52:46,371 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:52:46,377 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:52:53,656 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 and c.channel_name = ? 
+2018-05-15 16:52:53,660 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜车(String)
+2018-05-15 16:52:53,667 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:53:03,079 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 and c.channel_name = ? 
+2018-05-15 16:53:03,088 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 易搜(String)
+2018-05-15 16:53:03,093 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 16:53:06,272 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:53:06,277 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:53:06,288 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:53:11,509 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and create_time >= DATE_FORMAT(?,'%Y-%m-%d') and create_time <= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:53:11,512 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String), 2018-05-16(String)
+2018-05-15 16:53:11,518 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 16:53:23,964 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and create_time >= DATE_FORMAT(?,'%Y-%m-%d') and create_time <= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:53:23,968 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-01-15(String), 2018-05-16(String)
+2018-05-15 16:53:23,977 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:53:51,194 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and create_time >= DATE_FORMAT(?,'%Y-%m-%d') and create_time <= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:53:51,197 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-01-15(String), 2018-05-16(String)
+2018-05-15 16:53:51,204 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:53:56,256 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and create_time <= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:53:56,260 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-16(String)
+2018-05-15 16:53:56,267 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:54:05,944 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 and create_time >= DATE_FORMAT(?,'%Y-%m-%d') GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:54:05,946 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 2018-05-15(String)
+2018-05-15 16:54:05,950 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 0
+2018-05-15 16:54:10,865 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:54:10,868 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:10,876 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:54:16,644 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:54:16,646 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:16,652 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:17,195 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 16:54:17,201 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:17,216 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 16:54:17,771 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:54:17,772 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:17,774 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:18,189 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:54:18,193 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:18,200 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:54:21,212 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:54:21,214 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:21,219 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:21,625 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 16:54:21,630 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:21,644 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 16:54:24,709 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:54:24,710 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:24,713 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:25,110 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:54:25,129 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:25,138 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:54:53,020 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:54:53,023 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:53,030 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:54,217 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:54:54,218 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:54,220 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:54:54,596 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:54:54,599 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:54:54,605 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:55:14,398 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:55:14,399 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:14,402 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:55:14,822 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 16:55:14,825 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:14,842 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 16:55:27,748 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:55:27,750 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:27,754 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:55:28,371 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:55:28,379 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:28,384 DEBUG [qtp1129670968-18] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:55:29,708 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:55:29,709 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:29,712 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:55:30,081 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==>  Preparing: SELECT * FROM (SELECT a.*,b.`channel_name` FROM yq_order a LEFT JOIN channel b ON a.`channel_id`=b.`id` ) c WHERE 1=1 order by c.id desc 
+2018-05-15 16:55:30,084 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:30,093 DEBUG [qtp1129670968-19] (BaseJdbcLogger.java:139) - <==      Total: 7
+2018-05-15 16:55:30,796 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==>  Preparing: select group_concat(t.total) FROM ( select count(*) total FROM yq_order union all select count(*) total FROM yq_order WHERE `status`=0 union all select count(*) total FROM yq_order WHERE `status`=1 union all select count(*) total FROM yq_order WHERE `status`=2 union all select count(*) total FROM yq_order WHERE `status`=3 union all select count(*) total FROM yq_order WHERE `status`=4 union all select count(*) total FROM yq_order WHERE `status`=5) t 
+2018-05-15 16:55:30,797 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:30,800 DEBUG [qtp1129670968-13] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:55:31,226 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==>  Preparing: select * from (SELECT a.*,b.channel_name FROM (SELECT channel_id, COUNT(*) total, COUNT(`status` = 0 OR NULL) checking, COUNT(`status` = 1 OR NULL) querying, COUNT(`status` = 2 OR NULL) success, COUNT(`status` = 3 OR NULL) fail, COUNT(`status` = 4 OR NULL) reject, COUNT(`status` = 5 OR NULL) norecord FROM yq_order WHERE 1=1 GROUP BY channel_id) a LEFT JOIN channel b ON a.channel_id=b.id) c where 1=1 
+2018-05-15 16:55:31,230 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:31,234 DEBUG [qtp1129670968-15] (BaseJdbcLogger.java:139) - <==      Total: 2
+2018-05-15 16:55:33,362 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:55:33,367 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:55:33,372 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1
+2018-05-15 16:56:05,085 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==>  Preparing: select id, channel_name, appsecret, contacts, mobile, valid_time, callback_url, create_time, update_time from channel 
+2018-05-15 16:56:05,086 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - ==> Parameters: 
+2018-05-15 16:56:05,090 DEBUG [qtp1129670968-14] (BaseJdbcLogger.java:139) - <==      Total: 1

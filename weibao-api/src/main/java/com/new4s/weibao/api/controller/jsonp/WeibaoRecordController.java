@@ -1,16 +1,19 @@
 package com.new4s.weibao.api.controller.jsonp;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.new4s.weibao.api.system.GlobalVariable;
 import com.new4s.weibao.api.vo.JsonResult;
-import com.new4s.weibao.dao.entity.Channel;
+//import com.new4s.weibao.dao.entity.Channel;
 import com.new4s.weibao.dao.entity.YqOrder;
 import com.new4s.weibao.dao.service.IChannelService;
 import com.new4s.weibao.dao.service.IYqOrderService;
@@ -27,8 +30,12 @@ public class WeibaoRecordController {
 	@Autowired
 	IChannelService channelService;
 
+	@Autowired
+	StringRedisTemplate redisTemplate;
+
 	@ResponseBody
-	@RequestMapping(value = "/placeAnOrder",method = { RequestMethod.GET, RequestMethod.POST },consumes = "application/x-www-form-urlencoded")
+	@RequestMapping(value = "/placeAnOrder", method = { RequestMethod.GET,
+			RequestMethod.POST }, consumes = "application/x-www-form-urlencoded")
 	public JsonResult placeAnOrder(@RequestParam(value = "channelid", required = false) String channelId,
 			@RequestParam(value = "appsecret", required = false) String appsecret,
 			@RequestParam(value = "vin", required = false) String vin) {
@@ -49,18 +56,23 @@ public class WeibaoRecordController {
 			return result;
 		}
 
-		Channel channel = channelService.select(Integer.parseInt(channelId));
-		if (channel == null) {
+		// Channel channel = channelService.select(Integer.parseInt(channelId));
+		// 查内存中渠道数据
+		String allowAppsecret = GlobalVariable.channelMap.get(channelId);
+		if (StringUtil.isEmpty(allowAppsecret)) {
 			result.setCode(104);
 			result.setMsg("渠道ID不正确");
 			return result;
 		} else {
-			if (!appsecret.equals(channel.getAppsecret())) {
+			if (!appsecret.equals(allowAppsecret)) {
 				result.setCode(105);
 				result.setMsg("密匙不正确");
 				return result;
 			}
 		}
+
+//		redisTemplate.opsForValue().set(channelId, appsecret, 60 * 10, TimeUnit.SECONDS);
+//		System.out.println(redisTemplate.opsForValue().get(channelId));
 
 		TaskVo taskVo = new TaskVo();
 		taskVo.setVinCode(vin);

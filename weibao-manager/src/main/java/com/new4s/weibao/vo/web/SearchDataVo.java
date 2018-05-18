@@ -44,7 +44,8 @@ public class SearchDataVo extends ID {
         this.orderField = orderField;
 
         this.size = size;
-        this.start = start;
+        //this.start = start;  //start是按条方式
+        this.start = (start-1)*size; //start是按页的方式
         if (this.start < 0) {
             this.start = 0;
         }

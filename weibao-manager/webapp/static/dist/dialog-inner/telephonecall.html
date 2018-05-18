@@ -1,0 +1,68 @@
+<div class="pdtop16">
+	<div class="table_rows" style="width:502px;height:375px;margin: 0 20px;">
+        <div class="table_box" style="width:500px;height:375px;">
+            <table class="table_main" style="width:500px;height:375px;" id="boxPhoneList"></table>
+        </div>
+    </div>
+    <div class="call-box call-theme2">
+        <div class="keypad">
+            <input class="pn-show" value="15068194556"/>
+    
+            <!--拨号设备状态  加上class hide隐藏-->
+            <div class="status"></div>
+            <div class="keys">
+                <div>
+                    <a href="#" class="ln key1">1</a>
+                    <a href="#" class="key2">2<em>ABC</em></a>
+                    <a href="#" class="key3">3<em>DEF</em></a>
+                </div>
+                <div>
+                    <a href="#" class="key4">4<em>GHI</em></a>
+                    <a href="#" class="key5">5<em>JKL</em></a>
+                    <a href="#" class="key6">6<em>MNO</em></a>
+                </div>
+                <div>
+                    <a href="#" class="key7">7<em>PQRS</em></a>
+                    <a href="#" class="key8">8<em>TUV</em></a>
+                    <a href="#" class="key9">9<em>WXYZ</em></a>
+                </div>
+                <div>
+                    <a href="#" class="ln key-star">*</a>
+                    <a href="#" class="ln key0">0</a>
+                    <a href="#" class="ln key-sharp">#</a>
+                </div>
+                <div>
+                    <a href="#" class="backspace"></a>
+                    <a href="#" class="calling">呼叫</a>
+                    <span class="calling-status">正在通话中...</span>
+                    <!--挂断按钮平时隐藏 当通话或拨号时显示(去掉class hide就能显示)-->
+                    <a href="#" class="hangup hide">挂断</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../www/resource/js/keypad.js"></script>
+<script type="text/javascript">
+(function(){
+	var Columns  = {
+		'transfer' : [
+			{field:'ownername1',title:'类型',width:160,align:'center'},
+			{field:'ownername2',title:'客服姓名',width:160,align:'center'},
+			{field:'ownername3',title:'开始时间',width:220,align:'left'},
+			{field:'ownername4',title:'通话时长',width:160,align:'left'},
+			{field:'ownername5',title:'通话结果',width:160,align:'center'},
+			{field:'ownername6',title:'录音',width:80,align:'left'}
+		],
+	};
+
+	Core.Dialog.Datagrid($('#boxPhoneList'),{
+		idField: 'id',
+		columns: [Columns['transfer']],
+        url: '../resource/jsondata/detailview-transfer.json',
+        width: 500,
+        height: 375,
+        fitColumns: true
+	});
+})();
+</script>

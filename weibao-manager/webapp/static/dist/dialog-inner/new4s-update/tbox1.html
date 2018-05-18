@@ -1,0 +1,220 @@
+<div class="pdtop16">
+	<div class="row">
+	    <label>
+	        <div class="field_text">客户编号：</div>
+	        <input type="text" class="input-text" disabled data-field="iorderid" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">建档时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">性别：</div>
+	        <select class="z-select" data-field="sex" name="sex">
+	        	<option value="0">保密</option>
+				<option value="1" selected>男</option>
+				<option value="2">女</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">信息类型：</div>
+	        <select class="z-select" data-field="infotype" name="infotype" data-skin="require">
+	        	<option value="">请选择</option>
+	        	<option value="1" selected>类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息渠道：</div>
+	        <select class="z-select" data-field="infoplace" name="infoplace">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2" selected>类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息来源：</div>
+	    	<select class="z-select" data-field="infosource" name="infosource" data-skin="require">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购品牌：</div>
+	        <select class="z-select" data-field="brand" name="brand" id="Layer-Brand-01">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车系：</div>
+	        <select class="z-select" data-field="series" name="series"  id="Layer-Brand-02">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车型：</div>
+	        <select class="z-select" data-field="spec" name="spec"  id="Layer-Brand-03">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购车辆颜色：</div>
+	        <select class="z-select" data-field="exterior" name="exterior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购内饰颜色：</div>
+	        <select class="z-select" data-field="interior" name="interior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">报价：</div>
+	        <select class="z-select" data-field="price" name="price">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="field_text">促销内容：</div>
+	    <textarea class="input-text w692" data-field="slogan" name="slogan"></textarea>
+	</div>
+	<div class="row">
+	    <div class="field_text">备注：</div>
+	    <textarea class="input-text w692" data-field="content" name="content" style="height:34px;"></textarea>
+	</div>
+	<div class="row">
+	    <div class="field_text">系统备注：</div>
+	    <textarea class="input-text w692 disabled" readonly data-field="sysmsg" name="sysmsg"></textarea>
+	</div>
+
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟上本地牌：</div>
+	        <select class="z-select" data-field="licenceplate" name="licenceplate">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购时间：</div>
+	        <select class="z-select" data-field="ibuytime" name="ibuytime">
+	        	<option value="">请选择拟购时间</option>
+	        	<option value="1">7天内</option>
+				<option value="2">15天内</option>
+				<option value="3">1个月内</option>
+				<option value="4">3个月内</option>
+				<option value="5">3个月以上</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">竞品信息：</div>
+	        <select class="z-select" id="Layer-Competitor-01">
+	        	<option value="">请选择品牌</option>
+	        </select>
+	        <select class="z-select" id="Layer-Competitor-02">
+	        	<option value="">请选择车系</option>
+	        </select>
+	        <button class="btn btn-mini" type="button" id="addCompetitor">添加</button>
+	    </div>
+	</div>
+	<ul class="mark-list" data-key="competitor" id="markList">
+		<!-- <li title="奥迪A4(进口)-奥迪A3(进口)新能源" data-key="471-4325">
+			<span>奥迪A4(进口)-奥迪A3(进口)新能源</span><i class="clear_req"></i>
+		</li>
+		<li title="奥迪A4L-奥迪A1" data-key="692-650">
+			<span>奥迪A4L-奥迪A1</span><i class="clear_req"></i>
+		</li> -->
+	</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+	//初始化联动下拉框
+    Core.CombDown.init([[$('#Layer-Brand-01'),370],[$('#Layer-Brand-02'),''],[$('#Layer-Brand-03'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_series.json"
+	        });
+    Core.CombDown.init([[$('#Layer-Competitor-01'),''],[$('#Layer-Competitor-02'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_series.json"
+	        });
+
+    /*选择竞品信息*/
+    var markdt = [
+    	// {'title': '奥迪A4(进口)-奥迪A3(进口)新能源','key': '471-4325'},
+    	// {'title': '奥迪A4L-奥迪A1','key': '692-650'}
+    ];
+    Core.ListEval.bindClear($('#markList'),markdt);
+
+    $(document).on('click','#addCompetitor',function(e){
+    	e.preventDefault();
+    	var mk = $('#markList');
+    	markList = mk.data('markdata');
+    	var x = $('#Layer-Competitor-01'), y = $('#Layer-Competitor-02');
+    	var xv = x.getZsValue(), xt = x.zsGetBox().find('.zs-value').attr('title');
+    	var yv = y.getZsValue(), yt = y.zsGetBox().find('.zs-value').attr('title');
+    	var prm = {};
+    	if(xv!=''){
+    		prm.key = xv;
+    		prm.title = xt;
+    		if(yv!=''){
+    			prm.key = xv+'-'+yv;
+    			prm.title = xt+'-'+yt;
+    		}
+    		if(Core.ListEval.checkval(prm,markList)>-1){ return;}
+			if(markList.length>=5){ return; }
+			markList.push(prm);
+			Core.ListEval.setlist(mk,markList);
+    	}
+
+    })
+
+	// $.zSelectGroup([{
+	//     elem: $('#Layer-Brand-01'),
+	//     setValue: '370',
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=1',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-02'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-03'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }]);
+
+})
+</script>

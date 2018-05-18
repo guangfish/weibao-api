@@ -1,0 +1,123 @@
+<div class="pdtop16">
+	<div class="row">
+	    <label>
+	        <div class="field_text">客户编号：</div>
+	        <input type="text" class="input-text" disabled data-field="iorderid" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">建档时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">性别：</div>
+	        <select class="z-select" data-field="sex" name="sex">
+	        	<option value="0">保密</option>
+				<option value="1" selected>男</option>
+				<option value="2">女</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">业务小组：</div>
+	        <select class="z-select" data-field="infotype" name="infotype">
+	        	<option value="">请选择</option>
+	        	<option value="1" selected>小组1</option>
+				<option value="2">小组2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息渠道：</div>
+	        <select class="z-select" data-field="infoplace" name="infoplace">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2" selected>类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息来源：</div>
+	    	<select class="z-select" data-field="infosource" name="infosource">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购品牌：</div>
+	        <select class="z-select" data-field="brand" name="brand" id="Layer-Brand-01">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车系：</div>
+	        <select class="z-select" data-field="series" name="series"  id="Layer-Brand-02">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车型：</div>
+	        <select class="z-select" data-field="spec" name="spec"  id="Layer-Brand-03">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购车辆颜色：</div>
+	        <select class="z-select" data-field="exterior" name="exterior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购内饰颜色：</div>
+	        <select class="z-select" data-field="interior" name="interior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+	//初始化联动下拉框
+    Core.CombDown.init([[$('#Layer-Brand-01'),370],[$('#Layer-Brand-02'),''],[$('#Layer-Brand-03'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_series.json"
+	        });
+
+	// $.zSelectGroup([{
+	//     elem: $('#Layer-Brand-01'),
+	//     setValue: '370',
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=1',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-02'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-03'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }]);
+
+})
+</script>

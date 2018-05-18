@@ -1,0 +1,142 @@
+<div class="pdtop16">
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">客户类型：</div>
+	        <select class="z-select" data-field="customertype" name="customertype">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">购买类型：</div>
+	        <select class="z-select" data-field="purchasetype" name="purchasetype">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">预购台数</div>
+	    	<input type="text" class="input-text" data-field="demand" value=""/>
+	    </label>
+	</div>
+	<div class="row">
+	    <label>
+	        <div class="field_text">号码归属地：</div>
+	        <input type="text" class="input-text disabled" readonly data-field="phoneaddr" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">备用电话：</div>
+	        <input type="text" class="input-text" data-field="sparephone" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">微信号：</div>
+	        <input type="text" class="input-text" data-field="weixin" value=""/>
+	    </label>
+	</div>
+	
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">现用品牌：</div>
+	        <select class="z-select" data-field="pbrand" name="pbrand" id="Layer-Present-01">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">现用车系：</div>
+	        <select class="z-select" data-field="pseries" name="pseries" id="Layer-Present-02">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">省份：</div>
+	        <select class="z-select" data-field="province" name="province" id="Layer-Level-01">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">城市：</div>
+	        <select class="z-select" data-field="city" name="city" id="Layer-Level-02">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">地区：</div>
+	        <select class="z-select" data-field="county" name="county" id="Layer-Level-03">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="field_text">具体地址：</div>
+	    <textarea class="input-text w692" data-field="address" name="address"></textarea>
+        <div class="label_select">
+	        <div class="field_text">标签：</div>
+	        <select class="z-select" id="selectTags">
+	        	<option value="">请选择标签...</option>
+	            <option value="1">标签1</option>
+	            <option value="2">标签2</option>
+	            <option value="3">标签3</option>
+	            <option value="4">标签4</option>
+	            <option value="5">标签5</option>
+	            <option value="6">标签6</option>
+	            <option value="7">标签7</option>
+	        </select>
+	        <button class="btn btn-mini" type="button" id="addTags">添加</button>
+	    </div>    
+	</div>
+	<ul class="mark-list" data-key="tags" id="tagsList">
+		<li title="标签2" data-key="2">
+			<span>标签2</span><i class="clear_req"></i>
+		</li>
+		<li title="标签3" data-key="3">
+			<span>标签3</span><i class="clear_req"></i>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+	//初始化联动下拉框
+    Core.CombDown.init([[$('#Layer-Present-01'),370],[$('#Layer-Present-02'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_series.json"
+	        });
+    Core.CombDown.init([[$('#Layer-Level-01'),''],[$('#Layer-Level-02'),''],[$('#Layer-Level-03'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_province.json"
+	        });
+
+    /*选择标签*/
+    var tagsdt = [
+    	{'title': '标签2','key': '2'},
+    	{'title': '标签3','key': '3'}
+    ];
+    Core.ListEval.bindClear($('#tagsList'),tagsdt);
+
+    $(document).on('click','#addTags',function(e){
+    	e.preventDefault();
+    	var mk = $('#tagsList');
+    	tagsList = mk.data('markdata');
+    	var x = $('#selectTags');
+    	var xv = x.getZsValue(), xt = x.zsGetBox().find('.zs-value').attr('title');
+    	var prm = {};
+    	if(xv!=''){
+    		prm.key = xv;
+    		prm.title = xt;
+    		if(Core.ListEval.checkval(prm,tagsList)>-1){ return; }
+			if(tagsList.length>=5){ return; }
+			tagsList.push(prm);
+			Core.ListEval.setlist(mk,tagsList);
+    	}
+
+    })
+
+	
+})
+</script>

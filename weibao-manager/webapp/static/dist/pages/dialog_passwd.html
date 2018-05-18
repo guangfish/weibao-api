@@ -1,0 +1,98 @@
+<style type="text/css">
+.dialog_box .w420{width: 420px;}
+.dialog_box .row textarea.input-text{padding: 3px 0;text-indent:3px;}
+.dialog_box.normal_form p.required_tip{text-indent:107px;}
+</style>
+<form class="normal_form dialog_box" onsubmit="return false;" id="myDemoDialog" style="padding-top:15px;margin-bottom:0;">
+	<div class="row">
+	    <label>
+	        <div class="field_text">渠道秘钥：</div>
+	        <input type="text" class="input-text require" data-field="qdkeycode" name="qdkeycode" value=""/>
+	        <button type="button" class="btn btn-mini" style="margin-top: -3px;">生成</button>
+	        <p class="colortip required_tip" style="color:#c1c1c1;">说明：重新生成并保存成功后，原有密钥失效</p>
+	    </label>
+	</div>
+	<div class="row"> 
+	    <div class="label_select">
+	        <div class="field_text">可查询次数：</div>
+	        <select class="z-select" data-field="timesSlect" name="hastimes">
+	        	<option value="1" selected>指定次数</option>
+				<option value="0">不限次数</option>
+	        </select>
+	    </div>
+	    <label id="timesInput">
+	        <input type="number" class="input-text" style="width:60px" data-field="timesnumber" value=""/> 次
+	    </label>
+	</div>
+	<div class="row">    
+	    <label>
+	        <div class="field_text">有效期限：</div>
+	        <input type="text" class="input-text date-ico" data-options="seconds:true" data-field="starttime" name="starttime" value=""/>
+	    </label>
+	    至
+	    <label>
+	    	<input type="text" class="input-text date-ico" data-options="seconds:true" data-field="endtime" name="endtime" value=""/>
+	    </label>
+	</div>
+	<div class="row">
+	    <label>
+	        <div class="field_text">账号密码：</div>
+	        <input type="password" class="input-text require" data-field="password" name="password" value="" placeholder="请输入当前账号的登录密码"/>
+	    </label>
+	</div>
+	<div class="ctrl_bar">
+        <button type="submit" class="btn sub_btn" id="dialogFormDemoBtn">保存</button> 
+        <a href="#close" class="btn cancle">取消关闭</a>
+    </div>
+</form>
+<script type="text/javascript">
+$(function(){
+    Core.InitSelect($('.dialog_box'));
+
+    //选择是否指定查询次数
+    $('select[data-field="timesSlect"]').on('setZsValue', function(){
+    	var _timesIn = $('#timesInput').find('.input-text');
+    	var _key = $(this).getZsValue();
+    	// console.log(_key);
+    	if(!parseInt(_key)){
+    		$('#timesInput').hide();
+    		_timesIn.removeAttr('name');
+    	}else{
+    		$('#timesInput').show();
+    		_timesIn.attr('name', _timesIn.attr('data-field'));
+    	}
+    })
+    
+    Core.Form.submit({
+        form: $('#myDemoDialog'), //form
+        url: 'submit_url_xxxxx', //提交url
+        successfun: function(result){
+
+        },errorfun: function(error){
+
+        }
+    },function(form){
+        //表单验证写在此处
+        //input-text.require不能为空
+        //textarea.require不能为空
+        //select require不能不选
+        console.log(form);
+        var _f = form, _ok = true;
+        if($('.require').length>0){
+            $('.require').each(function(_i,_t){
+                Core.Form.tips.clear(_f);
+                var _in = null;
+                _in = ($(_t).hasClass('zs-box'))? $(_t).find('input'):(($(_t).hasClass('input-text'))? $(_t):null);
+                if(_in && _in.attr('name')!='' && !Core.rule('*', $.trim(_in.val()))){
+                    Core.Form.tips.set(_in);
+                    _ok = false;
+                    return false;
+                }
+            })
+        }
+        return _ok;
+        //return false;//不能提交
+        // return true;//可以提交
+    });
+})
+</script>

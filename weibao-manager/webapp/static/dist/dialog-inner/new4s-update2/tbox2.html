@@ -1,0 +1,137 @@
+<div class="pdtop16">
+	<div class="row">
+	    <label>
+	        <div class="field_text">分配状态：</div>
+	        <input type="text" class="input-text disabled" readonly data-field="phoneaddrA" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">所属经销商：</div>
+	        <input type="text" class="input-text disabled" readonly data-field="sparephoneB" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">经销商线索重复：</div>
+	        <select class="z-select" data-field="customertype" name="customertype" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">分配时线索状态：</div>
+	        <select class="z-select" data-field="customertype1" name="customertype1" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">处理方式：</div>
+	        <select class="z-select" data-field="purchasetype2" name="purchasetype2" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">新增</option>
+				<option value="2">追加记录</option>
+				<option value="3">激活</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">分配类型：</div>
+	        <select class="z-select" data-field="purchasetype3" name="purchasetype3" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">自动分配</option>
+				<option value="2">人工分配</option>
+	        </select>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">有效性：</div>
+	        <select class="z-select" data-field="customertype" name="customertype" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">无效原因：</div>
+	        <select class="z-select" data-field="purchasetype4" name="purchasetype4" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">是否到店：</div>
+	        <select class="z-select" data-field="purchasetype5" name="purchasetype5" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <label>
+	        <div class="field_text">到店时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">是否试驾：</div>
+	        <select class="z-select" data-field="purchasetype6" name="purchasetype6" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">试驾时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	</div>
+	
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">是否成交：</div>
+	        <select class="z-select" data-field="purchasetype7" name="purchasetype7" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">成交时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">是否提车：</div>
+	        <select class="z-select" data-field="purchasetype8" name="purchasetype8" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <label>
+	        <div class="field_text">提车时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">战败原因：</div>
+	        <select class="z-select" data-field="purchasetype9" name="purchasetype9" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">最后更新时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+})
+</script>

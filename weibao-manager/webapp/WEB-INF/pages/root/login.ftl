@@ -5,14 +5,8 @@
 	header .head h1 { margin-left: 0;position: relative;left:0px}
 </style>
 </#assign>
-<@model.webhead />
+
 <div class="wrapper clearfix">
-		<header class="clearfix">
-			<div class="head">
-				<h1><img src="/static/images/logo2.png" style="width:210px;"></h1>
-				<span class="login-line"></span>
-			</div>
-		</header>
 		
 		<div class="main" id="main">
 			<div class="main-container" style="height: auto;">
@@ -23,7 +17,7 @@
 				</div>
 				<div class="login-box-line"></div>
 				<div class="login" id="login">
-					<div class="hd"><img src="/static/images/logo3.png" style="height:60px;"></div>
+					<div class="hd"><img src="${model.static_domain}/resource/image/logo.png"></div>
 					<div class="login-form">
 						<form id="loginform" name="loginform" action="/doLogin" method="post"  style="margin:0px">
 							<div class="login-main">
@@ -46,10 +40,6 @@
 				</div>
 			</div>
 		</div>
-
-		<footer class="clearfix">
-			© 2018 浙江百泰信息技术有限公司 All Rights Reserved
-		</footer>
 	</div>
 	<script type="text/javascript" src="${model.static_domain}/js/jquery-2.1.4.min.js"></script>
 	

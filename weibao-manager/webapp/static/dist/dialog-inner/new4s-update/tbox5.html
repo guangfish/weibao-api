@@ -1,0 +1,77 @@
+<div class="pdtop16">
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">线索拥有者：</div>
+	        <select class="z-select" data-field="mlevel" name="mlevel">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">最后操作人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled />
+	    </label>
+	    <div class="label_select">
+		    <div class="field_text">集客人：</div>
+		    <select class="z-select" name="mlevel" data-skin="zs-disabled">
+		    	<option value="">请选择</option>
+		    	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+		    </select>
+        </div>    
+	</div>
+	<div class="row">
+		<label>
+	        <div class="field_text">邀约人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	    <label>
+	        <div class="field_text">引导人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	    <label>
+	        <div class="field_text">接待人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	</div>
+	<div class="table_rows" style="width:802px;height:300px;margin-top:20px;">
+        <div class="table_box" style="width:800px;height:300px;">
+            <table class="table_main" style="width:800px;height:300px;" id="transferGrid"></table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+(function(){
+	var Columns  = {
+		'transfer' : [
+			{field:'by-id',title:'',align:'left'},
+			{field:'dateline',title:'时间',width:120,align:'center',formatter:function(value,row,index){
+				return Core.rule('p.integer',value[0]) ? value[2] : "-";
+			}},
+			{field:'state',title:'线索状态',width:200,align:'center',formatter:function(value,row,index){				
+				return (row.stated=='0' || row.state==row.stated) ? Columns['ArchiveState'][row.state.toString()] || '-' : (Columns['ArchiveState'][row.stated.toString()] || '-') +' -> '+(Columns['ArchiveState'][row.state.toString()] || '-');
+			}},
+			{field:'ownername',title:'线索拥有者',width:100,align:'center',formatter:function(value,row,index){
+				return value!='' ? value : "-";
+			}},
+			{field:'addname',title:'操作员',width:100,align:'center',formatter:function(value,row,index){
+				return value!='' ? value : "-";
+			}},
+			{field:'message',title:'系统消息',width:290,align:'left'},
+		],
+		'ArchiveState' : {
+			'-1' : '线索市场','1' : '导入|集客','2' : '清洗|邀约','3' : '到店|洽谈','4' : '追踪|促成','5' : '预订|成交','10' : '提车|回访','21' : '转出待审','22' : '转出待审','23' : '战败待审','31' : '转出潜客','32' : '战败潜客','33' : '无效潜客'
+		}
+	};
+
+	Core.Dialog.Datagrid($('#transferGrid'),{
+		idField: 'id',
+		columns: [Columns['transfer']],
+        url: '../resource/jsondata/detailview-transfer.json',
+        width: 800,
+        height: 300,
+        fitColumns: true
+	});
+})();
+</script>

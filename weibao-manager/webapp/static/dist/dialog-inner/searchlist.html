@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+ <head>
+  <meta name="google" value="notranslate" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" />
+  <title></title> 
+  <script type="text/javascript">
+  var _staticPath = '../resource/';
+  </script>
+  <link rel="stylesheet" type="text/css" href="../resource/css/index.css" /> 
+  <script type="text/javascript" src="../resource/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../resource/js/jquery-easyui-1.4.5/easyloader.js"></script>
+  <script type="text/javascript" src="../resource/js/wdatepicker/wdatepicker.js"></script>
+  <script type="text/javascript" src="../resource/js/layer/layer.js"></script>
+  <script type="text/javascript" src="../resource/js/z-select/zs.js"></script>
+  <script type="text/javascript" src="../resource/js/public.core.js"></script>
+  
+<!--综合查询-->
+<form class="search_form" attr-rows="auto" onsubmit="return false;">
+    <!-- rows_two -->
+    <div class="sc_wrap">
+        <div class="req_title">搜索条件：</div>
+        <div class="req_value">
+            <!--搜索demo-->
+            <select class="z-select search_key">
+                <!--input输入框-->
+                <option value="uname">客户姓名</option>
+                <option value="phone">手机号码</option>
+                <!--select下拉框-->
+                <option value="state">线索状态</option>
+                <option value="infotype">信息类型</option>
+                <option value="iseries">选购车系</option>
+                <option value="dseries">提车车系</option>
+                <!--下拉框二级联动三级联动-->
+                <option value="province-city">省份-城市</option>
+                <option value="brand-series-spec">品牌-车系-车型</option>
+            </select>
+        </div>
+        
+        <div class="req_value search_write_box" attr-box>
+            <input class="input-text search_write" placeholder="请输入关键词" />
+        </div>
+        <div class="req_value disn search_select_box" attr-box>
+            <select class="z-select search_select"></select>
+        </div>
+        <div class="req_value disn search_group_box search-province-city" attr-box>
+            <select class="z-select" data-fname="province" data-prompt="请选择省份"></select>
+            <select class="z-select" data-fname="city" data-prompt="请选择城市"></select>
+        </div>
+        <div class="req_value disn search_group_box search-brand-series-spec" attr-box>
+            <select class="z-select" data-fname="brand" data-prompt="请选择品牌"></select>
+            <select class="z-select" data-fname="series" data-prompt="请选择车系"></select>
+            <select class="z-select" data-fname="spec" data-prompt="请选择车型"></select>
+        </div>
+        <a class="add_req">添加条件</a>
+        <div class="auto-timelist">
+            <hr class="border"/>
+            <div class="req_value">
+                <select class="z-select time_select">
+                    <option value="posttime">提交时间</option>
+                    <option value="invitetime">预约时间</option>
+                    <option value="firstarrivetime">首次到店时间</option>
+                    <option value="remindetime">预约下次时间</option>
+                    <option value="followtime">最后追踪回访时间</option>
+                    <option value="dateline">建档时间</option>
+                    <option value="arrivetime">客户来店时间</option>
+                    <option value="endtime">预订成交时间</option>
+                    <option value="delivertime">提车时间</option>
+                </select>
+            </div>
+            <div class="req_value">
+                <input class="input-text date-ico start-time" name="posttime[0]" onclick="WdatePicker()" readonly="readonly" placeholder="开始时间" />
+            </div>
+            <div class="req_value date_middle">至</div>
+            <div class="req_value">
+                <input class="input-text date-ico end-time" name="posttime[1]" onclick="WdatePicker()" readonly="readonly" placeholder="结束时间" />
+            </div>
+        </div>
+        <button class="search_btn btn btn-small">搜索</button>
+    </div>
+    <div class="search_list disn">
+        <hr class="border" />
+        <div class="req_list">
+            <div class="req_title">筛选条件：</div>
+            <ul></ul>
+            <a class="clear_all"><i class="clear_ico icon"></i>全部清除</a>
+        </div>
+        <div class="req_tips">注：最多只能增加5个筛选条件</div>
+    </div>
+</form>
+
+<div class="table_box">
+    <table class="table_main" id="allDatalist" data-columnskey="alldata"></table>
+</div>
+<script type="text/javascript" src="../resource/js/default.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+Core.Easyui.FieldColumn = [
+    {field:'posttime',title:'提交时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'infotypename',title:'信息类型',width:100,align:'center',sortable:true},
+    {field:'infoplacename',title:'信息渠道',width:100,align:'center',sortable:true},
+    {field:'infosourcename',title:'信息来源',width:100,align:'center',sortable:true},
+    {field:'effective',title:'有效性判断',width:70,align:'center',formatter:function(value,row,index){
+        return ['...','<i class="yes-ico"></i>', '<i class="no-ico"></i>'][value] || '';
+    }},
+    {field:'sex',title:'性别',width:45,align:'center',sortable:true,formatter:function(value,row,index){
+        return ['-','<i class="men-ico" title="男"></i>','<i class="women-ico" title="女"></i>'][value] || '';
+    }},
+    {field:'phoneaddr',title:'号码归属地',width:100,align:'center',sortable:true},
+    {field:'licenceplate',title:'拟上本地牌',width:80,align:'center',formatter:function(value,row,index){
+        return ['-','<i class="yes-ico"></i>', '<i class="no-ico"></i>'][value] || '';
+    }},
+    {field:'ownername',title:'线索拥有者',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return !parseInt(row.owneruid) && (parseInt(row.state)>=1 && parseInt(row.state)<=10) ? "<a href='javascript:void(0);' onclick='' data-tid='"+row.tid+"' class='receive'>接收</a>" : value;
+    }},
+    {field:'competitorname',title:'竞品信息',width:100,align:'center'},
+    {field:'tracktagname',title:'标签',width:100,align:'center'},
+    {field:'brandname',title:'拟购品牌',width:80,align:'center'},
+    {field:'specname',title:'拟购车型',width:100,align:'center'},
+    {field:'ibuytimename',title:'拟购时间',width:100,align:'center',sortable:true},
+    {field:'price',title:'报价',width:100,align:'center'},
+    {field:'slogan',title:'促销内容',width:120,align:'center'},
+    {field:'content',title:'备注',width:350,align:'center'},
+    {field:'remindetime',title:'预约下次时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'customerlevelname',title:'追踪级别',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return (parseInt(row.state)>=2 && parseInt(row.state)<=23) ? value : "-";
+    }},
+    {field:'followalarm',title:'追踪报警',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        if((parseInt(row.state)>=2 && parseInt(row.state)<=10)){
+        switch(value){case "0":return '正常';break;case "1":return "正常(24小时内超时)";break;case "2":return '追踪超时';break;}
+        }else{
+        return '-';
+        }       
+    }},
+    {field:'trackend',title:'线索结案',width:100,align:'center',formatter:function(value,row,index){
+        return row.state!='10' ? '-' : (['-','<i class="yes-ico"></i>'][value] || '-'); 
+    }},
+    {field:'follow',title:'追踪/回访次数',width:100,align:'center',formatter:function(value,row,index){
+        try{
+            return parseInt(row.follow)+parseInt(row.feedback);
+        }catch(e){return '0';}
+    }},
+    {field:'connectwayname',title:'追踪/回访方式',width:100,align:'center'},
+    {field:'followtime',title:'最后追踪/回访时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'followname',title:'最后追踪/回访人',width:100,align:'center'},
+    {field:'followinfo',title:'追踪/回访情况',width:120,align:'center',formatter:function(value,row,index){
+        return '<span title="'+value+'">'+value+'</span>';
+    }},
+    {field:'invitetime',title:'预约到店时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'arrivetime',title:'最近来店时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'leavetime',title:'最近离店时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'reception',title:'接待时长',width:80,align:'center',formatter:function(value,row,index){
+        return Core.rule('p.integer',value) ? value+'分钟' : '-';
+    }},
+    {field:'arrivepeoplenum',title:'来店人数',width:80,align:'center',formatter:function(value,row,index){
+        return Core.rule('p.integer',value) ? value : '-';
+    }},
+    {field:'arrive',title:'是否到店',width:80,align:'center',sortable:true,formatter:function(value,row,index){
+        return ['<i class="no-ico"></i>','<i class="yes-ico"></i>'][value] || '';
+    }},
+    {field:'driving',title:'是否试驾',width:80,align:'center',sortable:true,formatter:function(value,row,index){
+        return ['<i class="no-ico"></i>','<i class="yes-ico"></i>'][value] || '';
+    }},
+    {field:'arrivenum',title:'来店次数',width:60,align:'center'},
+    {field:'firstarrivetime',title:'首次到店时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'provincename',title:'省份',width:80,align:'center',sortable:true,formatter:function(value,row,index){
+        return row.region ? row.region.split(',')[0] : '';
+    }},
+    {field:'cityname',title:'城市',width:80,align:'center',sortable:true,formatter:function(value,row,index){
+        return row.region ? row.region.split(',')[1] : '';
+    }},
+    {field:'districtname',title:'地区',width:80,align:'center',sortable:true,formatter:function(value,row,index){
+        return row.region ? row.region.split(',')[2] : '';
+    }},
+    {field:'exteriorname',title:'拟购车辆颜色',width:100,align:'center'},
+    {field:'interiorname',title:'拟购内饰颜色',width:100,align:'center'},
+    {field:'customertype',title:'客户类型',width:80,align:'center',formatter:function(value,row,index){return ['-','个人','公司','行政单位'][value] || '';}},
+    {field:'purchasetype',title:'购买类型',width:80,align:'center',formatter:function(value,row,index){return ['-','首购','增购','置换'][value] || '';}},
+    {field:'demand',title:'预购台数',width:60,align:'center'},
+    {field:'pbrandname',title:'现用品牌',width:100,align:'center'},
+    {field:'pseriesname',title:'现用车系',width:100,align:'center'},
+    {field:'sparephone',title:'备用手机',width:110,align:'center'},
+    {field:'address',title:'具体地址',width:180,align:'center'},
+    {field:'weixin',title:'微信号',width:100,align:'center'},
+    {field:'lastname',title:'最后操作人',width:100,align:'center'},
+    {field:'ibrandname',title:'选购品牌',width:100,align:'center'},
+    {field:'iseriesname',title:'选购车系',width:100,align:'center'},
+    {field:'ispecname',title:'选购车型',width:100,align:'center'},
+    {field:'ordernum',title:'订单号',width:100,align:'center',sortable:true},
+    {field:'strikeprice',title:'成交价',width:100,align:'center',sortable:true},
+    {field:'strikeexteriorname',title:'成交车辆颜色',width:100,align:'center'},
+    {field:'strikeinteriorname',title:'成交内饰颜色',width:100,align:'center'},
+    {field:'endtime',title:'预订成交时间',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'dbrandname',title:'提车品牌',width:100,align:'center'},
+    {field:'dseriesname',title:'提车车系',width:100,align:'center'},
+    {field:'dspecname',title:'提车车型',width:100,align:'center'},
+    {field:'deliverexteriorname',title:'提车车辆颜色',width:100,align:'center'},
+    {field:'deliverinteriorname',title:'提车内饰颜色',width:100,align:'center'},
+    {field:'delivertime',title:'提车时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'plate',title:'车牌号',width:100,align:'center'},
+    {field:'vin',title:'车架号',width:100,align:'center'},
+    {field:'insurername',title:'保险公司',width:100,align:'center'},
+    {field:'policyno',title:'保单号',width:100,align:'center'},
+    {field:'paymentwayname',title:'支付方式',width:100,align:'center'},
+    {field:'loanbankname',title:'按揭银行',width:100,align:'center'},
+    {field:'loanfee',title:'按揭服务费',width:100,align:'center'},
+    {field:'supsales',title:'用品销售额',width:100,align:'center'},
+    {field:'mlevel',title:'会员',width:80,align:'center'},
+    {field:'vas',title:'其它增值服务',width:100,align:'center'},
+    {field:'invalidname',title:'线索无效原因',width:100,align:'center'},
+    {field:'giveupcausename',title:'战败原因',width:100,align:'center'},
+    {field:'failurereason',title:'战败原因分析',width:100,align:'center'},
+    {field:'dateline',title:'建档时间',width:120,align:'center',sortable:true,formatter:function(value,row,index){
+        return Core.rule('p.integer',value[0]) ? value[2] : "-";
+    }},
+    {field:'mpname',title:'集客人',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return $.inArray(row.state,['1'])!=-1 ? "<span style='color:red'>"+value+"</span>" : value;
+    }},
+    {field:'dccname',title:'邀约人',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return $.inArray(row.state,['2'])!=-1 ? "<span style='color:red'>"+value+"</span>" : value;
+    }},
+    {field:'exname',title:'引导人',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return $.inArray(row.state,['3'])!=-1 ? "<span style='color:red'>"+value+"</span>" : value;
+    }},
+    {field:'dsname',title:'接待人',width:100,align:'center',sortable:true,formatter:function(value,row,index){
+        return $.inArray(row.state,['4','5','10'])!=-1 ? "<span style='color:red'>"+value+"</span>" : value;
+    }},
+    {field:'iorderid',title:'客户编号',width:100,align:'center',sortable:true},
+    {field:'sysmsg',title:'系统备注',width:200,align:'left',formatter:function(value,row,index){
+        return "<span style='color:red'>"+value+"</span>";
+    }},
+];
+Core.Easyui.FrozenColumn = [
+    {field:'state',title:'线索状态',width:100,align:'center',formatter:function(value,row,index){
+    if ($.inArray(value,['1','2','3','4','5','10']) != -1){
+        return '<span>'+(['-','导入|集客','清洗|邀约','到店|洽谈','追踪|促成','预订|成交','-','-','-','-','提车|回访'][value] || '')+'</span>';
+        // return '<span '+Core.Sys.Archive(value,row.posttime[1],['forced','voluntary'],row.customerlevel)+'>'+(['-','导入|集客','清洗|邀约','到店|洽谈','追踪|促成','预订|成交','-','-','-','-','提车|回访'][value] || '')+'</span>';
+    } else {
+        var As = {'21' : '转出待审','22' : '转出待审','23' : '战败待审','31' : '转出潜客','32' : '战败潜客','33' : '无效潜客'}
+        return As[value.toString()];
+    }
+    }},
+    {field:'uname',title:'客户姓名',width:80,align:'center'},
+    {field:'phone',title:'手机号码',width:130,align:'center',sortable:true},
+    {field:'seriesname',title:'拟购车系',width:100,align:'center',sortable:true}
+];
+Core.Easyui.init({
+    grid: $('#allDatalist'), //datagrid table
+    sbar: $('.search_form'), //datagrid search form
+},Core.Easyui.FieldColumn,{
+    idField: 'bid',
+    fitColumns: false,
+    frozenColumns: [Core.Easyui.FrozenColumn],
+    onLoadSuccess:function(data){ 
+        Core.Easyui.resize();
+    },
+    onSortColumn:function (sort, order) {
+        try{
+            // Core.Easyui.Params.sort(sort,order);
+        }catch(e){
+
+        }
+    },
+    onClickRow:function(index,row){
+        // $(this).datagrid('clearSelections');
+        // $(this).datagrid('selectRow',index);
+    },
+    onDblClickRow : function(index,row){
+        
+    }
+});
+
+Core.Easyui.get('../resource/jsondata/new4s_showlist.json');
+
+$(document).ready(function(){
+    //搜索工具栏内有联动下拉
+    var CombDown = {
+        tag: false,
+        list: [{
+            "box": "province-city", //省份城市
+            "valueField": "id",
+            "textField": "name",
+            "url": "../resource/jsondata/new4s_xs_province.json"
+        },{
+            "box": "brand-series-spec", //品牌 车系 车型
+            "valueField": "id",
+            "textField": "name",
+            "url": "../resource/jsondata/new4s_xs_series.json"
+        }],
+        init: function(_v){
+            var m = CombDown.list.map(function(v,k){ return v["box"]; });
+            var x = $.inArray(_v,m);
+            if(x<0) {return;}
+            CombDown.tag = true;
+            var arr = _v.split('-');
+            var optArr = [];
+            for(var r in arr){
+                optArr.push({
+                    elem: $('select[data-fname='+arr[r]+']'),
+                    valueField: CombDown.list[x]['valueField'],
+                    textField: CombDown.list[x]['textField'],
+                    url: CombDown.list[x]['url']+'?'+(r>0?'parentid=@parentValue':''),
+                    dataFitler: function(result) { return result; }
+                })
+            }
+            $.zSelectGroup(optArr);
+        },
+    }
+  
+    //搜索工具栏-下拉框选择搜索类型
+    $('.search_form').on('setZsValue','.search_key',function(){
+        var _f = $(this).parents('form');
+        var _key = $(this).getZsValue();
+
+        var sField = {};
+        CombDown.tag = false;
+        if($.inArray(_key,['state'])!=-1){
+            sField = {'valueField': 'id','textField': 'name','url': '../resource/jsondata/new4s_xs_state.json'};
+        }else if($.inArray(_key,['infotype'])!=-1){
+            sField = {'valueField': 'id','textField': 'title','url': '../resource/jsondata/new4s_xs_infotype.json'};
+        }else if($.inArray(_key,['series','iseries','dseries'])!=-1){
+            sField = {'valueField': 'id','textField': 'name','url': '../resource/jsondata/new4s_xs_series.json'};
+        }
+
+        _f.find('.req_value[attr-box]').addClass('disn');
+        if(sField['url']){
+            //url存在是下拉框select
+            _f.find('.search_select_box').removeClass('disn');
+            _f.find('.search_select_box').find('.search_select').zsLoadData(sField).setZsValue('');
+        }else{
+            //联动下拉框
+            CombDown.init(_key);
+            if(CombDown.tag){ 
+                _f.find('.search-'+_key).removeClass('disn');
+                return;
+            }
+            //input
+            _f.find('.search_write_box').removeClass('disn');
+            _f.find('.search_write_box').find('input.search_write').val('');
+        }
+    })
+
+    //选择日期类型
+    $('.search_form').on('setZsValue','.time_select',function(){
+        var _f = $(this).parents('form');
+        var _key = $(this).getZsValue();
+        _f.find('.start-time').attr('name',_key+'[0]');
+        _f.find('.end-time').attr('name',_key+'[1]');
+    });
+
+});
+</script>

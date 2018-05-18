@@ -1,0 +1,446 @@
+<!--大弹窗层 修改了一些字段 v2.0 2018-04-17-->
+<form class="normal_form dialog_box" style="padding-top:15px;margin-bottom:0;">
+    <div class="text_center"> 
+        <div class="dt_label col_205aa4">客户姓名：<input class="input-text require" data-field="uname" value="" style="width: 160px;"/></div>
+        <div class="dt_label col_205aa4">手机号码：<input class="input-text w150 require" data-field="phone" value="" /></div>
+        <div class="dt_label col_205aa4">线索状态：
+            <div class="label_select">
+                <select class="z-select" data-field="state" name="state" data-skin="zs-disabled">
+                    <option value="">请选择线索状态...</option>
+                    <option value="-1">线索市场</option>
+                    <option value="1">导入|集客</option>
+                    <option value="2" selected>清洗|邀约</option>
+                    <option value="3">到店|洽谈</option>
+                    <option value="4">追踪|促成</option>
+                    <option value="5">预订|成交</option>
+                    <option value="10">提车|回访</option>
+                    <option value="21">转出待审</option>
+                    <option value="22">转出待审</option>
+                    <option value="23">战败待审</option>
+                    <option value="31">潜客(转出)</option>
+                    <option value="32">潜客(战败)</option>
+                    <option value="33">潜客(无效)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="links tab_links tab_stk" id="dialogTabs">
+        <a href="#tbox1">基本信息</a>
+        <a href="#tbox2">分配信息</a>
+        <a href="#tbox3">流转记录</a>
+        <a href="#tbox4">追踪记录</a>
+        <a href="#tbox5">追踪流转</a>
+        <a href="#tbox6" class="tab-link-last active"><i class="bh-ico"></i></a>
+    </div>
+    <div class="tbox tbox_inner" id="tbox1" tab-load="done">
+        <div class="pdtop16">
+	<div class="row">
+	    <label>
+	        <div class="field_text">客户编号：</div>
+	        <input type="text" class="input-text" disabled data-field="iorderid" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">建档时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">性别：</div>
+	        <select class="z-select" data-field="sex" name="sex">
+	        	<option value="0">保密</option>
+				<option value="1" selected>男</option>
+				<option value="2">女</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">业务小组：</div>
+	        <select class="z-select" data-field="infotype" name="infotype">
+	        	<option value="">请选择</option>
+	        	<option value="1" selected>小组1</option>
+				<option value="2">小组2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息渠道：</div>
+	        <select class="z-select" data-field="infoplace" name="infoplace">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2" selected>类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">信息来源：</div>
+	    	<select class="z-select" data-field="infosource" name="infosource">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购品牌：</div>
+	        <select class="z-select" data-field="brand" name="brand" id="Layer-Brand-01">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车系：</div>
+	        <select class="z-select" data-field="series" name="series"  id="Layer-Brand-02">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购车型：</div>
+	        <select class="z-select" data-field="spec" name="spec"  id="Layer-Brand-03">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">拟购车辆颜色：</div>
+	        <select class="z-select" data-field="exterior" name="exterior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">拟购内饰颜色：</div>
+	        <select class="z-select" data-field="interior" name="interior">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+	//初始化联动下拉框
+    Core.CombDown.init([[$('#Layer-Brand-01'),370],[$('#Layer-Brand-02'),''],[$('#Layer-Brand-03'),'']],{
+    			"valueField": "id",
+	            "textField": "name",
+	            "url": "../resource/jsondata/new4s_xs_series.json"
+	        });
+
+	// $.zSelectGroup([{
+	//     elem: $('#Layer-Brand-01'),
+	//     setValue: '370',
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=1',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-02'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }, {
+	//     elem: $('#Layer-Brand-03'),
+	//     valueField: 'id',
+	//     textField: 'name',
+	//     url: '../resource/jsondata/new4s_xs_series.json?level=2&pid=@parentValue',
+	//     dataFitler: function(result) {
+	//         return result;
+	//     }
+	// }]);
+
+})
+</script>
+
+    </div>
+    <div class="tbox tbox_inner" id="tbox2" tab-load="done">
+        <div class="pdtop16">
+	<div class="row">
+	    <label>
+	        <div class="field_text">分配状态：</div>
+	        <input type="text" class="input-text disabled" readonly data-field="phoneaddrA" value=""/>
+	    </label>
+	    <label>
+	        <div class="field_text">所属经销商：</div>
+	        <input type="text" class="input-text disabled" readonly data-field="sparephoneB" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">经销商线索重复：</div>
+	        <select class="z-select" data-field="customertype" name="customertype" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">分配时线索状态：</div>
+	        <select class="z-select" data-field="customertype1" name="customertype1" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">处理方式：</div>
+	        <select class="z-select" data-field="purchasetype2" name="purchasetype2" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">新增</option>
+				<option value="2">追加记录</option>
+				<option value="3">激活</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">分配类型：</div>
+	        <select class="z-select" data-field="purchasetype3" name="purchasetype3" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">自动分配</option>
+				<option value="2">人工分配</option>
+	        </select>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">有效性：</div>
+	        <select class="z-select" data-field="customertype" name="customertype" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">无效原因：</div>
+	        <select class="z-select" data-field="purchasetype4" name="purchasetype4" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">是否到店：</div>
+	        <select class="z-select" data-field="purchasetype5" name="purchasetype5" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <label>
+	        <div class="field_text">到店时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">是否试驾：</div>
+	        <select class="z-select" data-field="purchasetype6" name="purchasetype6" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">试驾时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	</div>
+	
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">是否成交：</div>
+	        <select class="z-select" data-field="purchasetype7" name="purchasetype7" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">成交时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">是否提车：</div>
+	        <select class="z-select" data-field="purchasetype8" name="purchasetype8" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        	<option value="1">是</option>
+				<option value="2">否</option>
+	        </select>
+	    </div>
+	</div>
+	<div class="row">
+	    <label>
+	        <div class="field_text">提车时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	    <div class="label_select">
+	        <div class="field_text">战败原因：</div>
+	        <select class="z-select" data-field="purchasetype9" name="purchasetype9" data-skin="readonly">
+	        	<option value="">请选择</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">最后更新时间：</div>
+	        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="dateline" value=""/>
+	    </label>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	Core.InitSelect($('.dialog_box'));
+})
+</script>
+    </div>
+    <div class="tbox tbox_inner" id="tbox3" tab-load="done">
+        <div class="pdtop16">
+	<div class="row">
+	    <div class="label_select">
+	        <div class="field_text">线索拥有者：</div>
+	        <select class="z-select" data-field="mlevel" name="mlevel">
+	        	<option value="">请选择</option>
+	        	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+	        </select>
+	    </div>
+	    <label>
+	        <div class="field_text">最后操作人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled />
+	    </label>
+	    <div class="label_select">
+		    <div class="field_text">集客人：</div>
+		    <select class="z-select" name="mlevel" data-skin="zs-disabled">
+		    	<option value="">请选择</option>
+		    	<option value="1">类型1</option>
+				<option value="2">类型2</option>
+		    </select>
+        </div>    
+	</div>
+	<div class="row">
+		<label>
+	        <div class="field_text">邀约人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	    <label>
+	        <div class="field_text">引导人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	    <label>
+	        <div class="field_text">接待人：</div>
+	        <input type="text" class="input-text" value="某某人" disabled/>
+	    </label>
+	</div>
+	<div class="table_rows" style="width:802px;height:300px;margin-top:20px;">
+        <div class="table_box" style="width:800px;height:300px;">
+            <table class="table_main" style="width:800px;height:300px;" id="transferGrid"></table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+(function(){
+	var Columns  = {
+		'transfer' : [
+			{field:'by-id',title:'',align:'left'},
+			{field:'dateline',title:'时间',width:120,align:'center',formatter:function(value,row,index){
+				return Core.rule('p.integer',value[0]) ? value[2] : "-";
+			}},
+			{field:'state',title:'线索状态',width:200,align:'center',formatter:function(value,row,index){				
+				return (row.stated=='0' || row.state==row.stated) ? Columns['ArchiveState'][row.state.toString()] || '-' : (Columns['ArchiveState'][row.stated.toString()] || '-') +' -> '+(Columns['ArchiveState'][row.state.toString()] || '-');
+			}},
+			{field:'ownername',title:'线索拥有者',width:100,align:'center',formatter:function(value,row,index){
+				return value!='' ? value : "-";
+			}},
+			{field:'addname',title:'操作员',width:100,align:'center',formatter:function(value,row,index){
+				return value!='' ? value : "-";
+			}},
+			{field:'message',title:'系统消息',width:290,align:'left'},
+		],
+		'ArchiveState' : {
+			'-1' : '线索市场','1' : '导入|集客','2' : '清洗|邀约','3' : '到店|洽谈','4' : '追踪|促成','5' : '预订|成交','10' : '提车|回访','21' : '转出待审','22' : '转出待审','23' : '战败待审','31' : '转出潜客','32' : '战败潜客','33' : '无效潜客'
+		}
+	};
+
+	Core.Dialog.Datagrid($('#transferGrid'),{
+		idField: 'id',
+		columns: [Columns['transfer']],
+        url: '../resource/jsondata/detailview-transfer.json',
+        width: 800,
+        height: 300,
+        fitColumns: true
+	});
+})();
+</script>
+    </div>
+    <div class="tbox tbox_inner" id="tbox4" tab-load="done">
+        <div class="pdtop16">
+	<div class="table_rows" style="width:802px;height:300px;">
+	    <div class="table_box" style="width:800px;height:375px;">
+	        <table class="table_main" style="width:800px;height:375px;" id="followGrid"></table>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+(function(){
+	var ColumnsB  = {
+		'follow' : [
+			{field:'by-id',title:'',align:'left'},
+			{field:'category',title:'类型',width:50,align:'center',formatter:function(value,row,index){
+			    return ['-','追踪','回访'][value] || '-';	
+			}},
+			{field:'addname',title:'追踪/回访人',width:100,align:'center'},
+			{field:'followtime',title:'追踪/回访时间',width:150,align:'center',formatter:function(value,row,index){
+				return Core.rule('p.integer',value[0]) ? value[2] : "-";
+			}},
+			{field:'connectwayname',title:'追踪/回访方式',width:100,align:'center',formatter:function(value,row,index){
+				return value+($.inArray(row.arriveweek,['1','2','3','4','5','6','7'])!=-1 ? '<span style="color:red">[首次]</span>' : '');
+			}},
+			{field:'customerlevelname',title:'追踪/回访级别',width:100,align:'center'},
+			{field:'followinfo',title:'追踪/回访情况',width:220,align:'center',formatter:function(value,row,index){
+				return '<span title="'+value+'">'+value+'</span>';
+			}},
+			{field:'price',title:'本次报价',width:80,align:'center',formatter:function(value,row,index){
+				return Core.rule('p.double',value) ? value : "-";
+			}},
+			{field:'driving',title:'试驾',width:50,align:'center',formatter:function(value,row,index){
+				return ['-','<i class="yes-ico"></i>'][value] || '';
+			}},
+		]
+	};
+
+	Core.Dialog.Datagrid($('#followGrid'),{
+		idField: 'id',
+		columns: [ColumnsB['follow']],
+        url: '../resource/jsondata/detailview-follow.json',
+        width: 800,
+        height: 375,
+        fitColumns: true
+	});
+})();	
+</script>
+    </div>
+    <div class="tbox tbox_inner" id="tbox5" data-url="../www/dialog-inner/new4s-update/tbox7.html"></div>
+    <div class="tbox tbox_inner" id="tbox6" data-url="../www/dialog-inner/telephonecall.html"></div>
+
+
+    <div class="ctrl_bar">
+        <div class="tips">注:请将信息填写完整！</div>
+        <button class="btn">保存</button> 
+        <a href="#close" class="btn cancle">取消关闭</a>
+    </div>
+</form>
+<script type="text/javascript">
+$(function(){
+    Core.InitSelect($('.dialog_box'));
+    Core.Tbox.load($('#dialogTabs'));
+
+    //品牌车系车型
+    //省市区
+
+    // $('#dialogTabs').trigger('tabload'); 
+});
+</script>

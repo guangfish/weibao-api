@@ -1,0 +1,122 @@
+.page_bar {
+  font-size: 12px;
+  color: #606f7b;
+}
+.page_bar span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
+  border: 1px solid #dedfde;
+  padding: 0 7px;
+  cursor: pointer;
+}
+.page_bar span:hover {
+  background-color: #ff6c00;
+  border: 1px solid #ff6c00;
+  color: #fff;
+}
+.page_bar .disabled {
+  cursor: not-allowed;
+  color: #c4c4c4;
+}
+.page_bar .current {
+  border: 1px solid transparent;
+  cursor: default;
+  color: #ff6c00;
+}
+.page_bar .ellipsis {
+  border: 1px solid transparent;
+  cursor: default;
+}
+.page_bar .disabled:hover {
+  background-color: transparent;
+  border: 1px solid #dedfde;
+  color: #c4c4c4;
+}
+.page_bar .current:hover {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #ff6c00;
+}
+.page_bar .ellipsis:hover {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #606f7b;
+}
+.page_bar .page_num {
+  color: #535353;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 37px;
+  height: 18px;
+  border: 1px solid #dedfde;
+  outline: none;
+}
+.page_bar .btn-small {
+  background-color: #f8f9fa;
+  width: 42px;
+  height: 20px;
+  border: 1px solid #cad0d3;
+  color: #28323a;
+  font-size: 12px;
+  line-height: normal;
+  vertical-align: top;
+}
+.page_bar .btn-small:hover {
+  border: 1px solid #28323a;
+  background-color: #28323a;
+  color: #fff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+/**
+ * date:2017-02-16;
+ * author:zsx;
+ * about: pagination;
+ */
+.page-list .pagination {
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-list .pagination li {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
+  border: 1px solid #dedfde;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.page-list .pagination li a {
+  display: inline-block;
+  padding: 2px 8px;
+}
+.page-list .pagination li:hover {
+  border: 1px solid #ff6c00;
+  background-color: #ff6c00;
+}
+.page-list .pagination li:hover a {
+  color: #ffffff;
+}
+.page-list .pagination li.active {
+  border: 1px solid transparent;
+  cursor: default;
+  color: #ff6c00;
+  padding: 2px 8px;
+}
+.page-list .pagination li.disabled {
+  cursor: not-allowed;
+  color: #c4c4c4;
+  padding: 2px 8px;
+}
+.page-list .pagination li.disabled:hover,
+.page-list .pagination li.active:hover {
+  background-color: transparent;
+}
+.page-list .pagination li.disabled:hover {
+  border-color: #dedfde;
+}
+.page-list .pagination li.active:hover {
+  border-color: transparent;
+}

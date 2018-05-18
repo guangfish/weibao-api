@@ -3,7 +3,7 @@ package com.new4s.weibao.common.web;
 /**
  * 
  * 
- * @author hl-tanyong
+ * @author chj
  * @version $Id: PageConst.java, v 0.1 2015年9月30日 上午9:27:00 hl-tanyong Exp $
  */
 public class PageConst {
@@ -22,35 +22,17 @@ public class PageConst {
 	/** 修改密码 ***/
 	public static final String INDEX_PASSWD = "root/passwd";
 
-	/*** 广告主活动管理 ***/
-	// 活动列表
-	public static final String CUSTOMER_ACTIVITY_LIST = "adcustomer/activity/list";
-	public static final String CUSTOMER_ACTIVITY_EDIT = "adcustomer/activity/edit";
-	public static final String CUSTOMER_ACTIVITY_ADSEAT_EDIT = "adcustomer/activity/adseat/edit";
-	public static final String CUSTOMER_JIUCUO_LIST = "adcustomer/jiucuo/list";
-	public static final String CUSTOMER_JIUCUO_DETAIL = "adcustomer/jiucuo/detail";
-
-	/*** 活动管理 ***/
-	public static final String ACTIVITY_LIST = "activity/list";
-	public static final String ACTIVITY_EDIT = "activity/edit";
-
-	/*** 任务管理 ***/
-	public static final String TASK_LIST = "task/list";
-	public static final String UNASSIGN_TASK_LIST = "task/unassignList";
-	public static final String SELECT_USER_EXECUTE = "task/selectExeUser";
-	public static final String DETAILS_PAGE = "task/detailsPage";
-
-	/*** 纠错管理 ***/
-	public static final String JIUCUO_LIST = "jiucuo/list";
-	public static final String JIUCUO_DETAIL = "jiucuo/detail";
+	/** 渠道管理 ***/
+	public static final String CHANNEL_LIST = "channel/list";
+	public static final String CHANNEL_ADD = "channel/add";
 	
-	/***资源管理***/
-	public static final String RESOURCE_ADD = "resource/add_ad_seat";
+	/** 经销商管理 ***/
+	public static final String DEALER_LIST = "dealer/list";
+	public static final String DEALER_ADD = "dealer/add";
 	
-	/***订单管理***/
-	public static final String ORDER_LIST = "templates/order/list";
+	/** 数据查询 ***/
+	public static final String DATA_LIST = "data/list";
+	public static final String DATA_LIST_DETAIL = "data/list-detail";
 	
-	/***返现管理***/
-	public static final String DRAW_CACHE_LIST = "templates/order/draw_list";
 
 }

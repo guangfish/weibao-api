@@ -1,0 +1,48 @@
+.normal_table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 12px;
+}
+.normal_table tr {
+  height: 43px;
+  border-bottom: 1px solid #cad0d3;
+}
+.normal_table tr:nth-child(2n) {
+  background-color: #fbfbfb;
+}
+.normal_table thead tr {
+  border-top: 0;
+  border-bottom: 1px solid #b2d2f2;
+}
+.normal_table th {
+  background-color: #f5f9fd;
+  color: #276ab0;
+  font-weight: bolder;
+}
+.normal_table td {
+  color: #606f7b;
+}
+table.newslist th,
+table.newslist td {
+  padding: 10px;
+}
+table.newslist td a {
+  color: #276ab0;
+  margin: 0 5px;
+  cursor: pointer;
+}
+table.newslist td a:hover {
+  color: #ec695e;
+}
+table.newslist td a.gray,
+table.newslist td a.gray:hover {
+  color: #c1c1c1;
+}
+table.newslist td a.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+table.newslist td a.disabled:hover {
+  text-decoration: none;
+}

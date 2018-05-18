@@ -1,0 +1,185 @@
+<div class="pdtop16">
+	<div class="field_group" field-key="group1">
+		<div class="chk_bar disib">
+            <div class="chk_txt"><i class="chk_state"></i> <span>追踪</span></div>
+        </div>
+        <div class="row">
+			<div class="label_select">
+		        <div class="field_text">追踪级别：</div>
+		        <select class="z-select" data-field="customerlevel" name="customerlevel" data-skin="require">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+		    <div class="label_select">
+		        <div class="field_text">追踪方式：</div>
+		        <select class="z-select" data-field="connectway" name="connectway" data-skin="require">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+		    <div class="label_select">
+		        <div class="field_text">追踪客服：</div>
+		        <select class="z-select" data-field="followuid" name="followuid" data-skin="zs-disabled">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+		</div>
+		<div class="row">
+		    <label>
+		        <div class="field_text">追踪时间：</div>
+		        <input type="text" class="input-text date-ico require" data-options="seconds:true" readonly data-field="followtime" value=""/>
+	    	</label>
+		    <label>
+		        <div class="field_text">预约下次时间：</div>
+		        <input type="text" class="input-text date-ico disabled" data-options="seconds:true" readonly data-field="remindetime" value=""/>
+	    	</label>
+		    <label>
+		        <div class="field_text">本次报价：</div>
+		    	<input type="text" class="input-text" data-field="followprice" value=""/>
+		    </label>
+		</div>
+		<div class="row">
+			<div class="field_text">追踪情况：</div>
+			<textarea class="input-text w692 require" data-field="followinfo" name="followinfo" style="height:68px;"></textarea>
+		</div>
+		<div class="row">
+			<div class="label_select">
+		        <div class="field_text">是否试驾：</div>
+		        <select class="z-select" data-field="driving" name="driving">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+		    <div class="label_select">
+		        <div class="field_text">是否结案：</div>
+		        <select class="z-select" data-field="trackend" name="trackend">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+			<div class="label_select">
+		        <div class="field_text">有效性判断：</div>
+		        <select class="z-select" data-field="effective" name="effective">
+		        	<option value="">请选择</option>
+		        	<option value="1">类型1</option>
+					<option value="2">类型2</option>
+		        </select>
+		    </div>
+		</div>
+	</div>
+	<div class="field_group" field-key="group2" style="margin-top:10px;height:188px;padding:0;">
+		<div class="chk_bar">
+            <div class="chk_txt"><i class="chk_state"></i><span>流转</span></div>
+        </div>
+        <div class="links tab_links tab_inner" id="dialog_mini_tabs">
+	        <a href="#mini_tbox1" class="active">提交至到店洽谈</a>
+	        <a href="#mini_tbox2">战败（商谈终止）</a>
+	    </div>
+	    <div class="tbox" id="mini_tbox1" tab-load="done">
+	    	<div class="row">
+	        	<label>
+			        <div class="field_text">预约来店时间：</div>
+			        <input type="text" class="input-text date-ico require" data-options="seconds:true" readonly data-field="invitetime_1" value=""/>
+		    	</label>
+		    	<div class="label_select">
+			        <div class="field_text">线索所有人：</div>
+			        <select class="z-select" data-field="owneruid" name="owneruid">
+			        	<option value="">请选择</option>
+			        	<option value="1">类型1</option>
+						<option value="2">类型2</option>
+			        </select>
+			    </div>
+	        </div>
+	    </div>
+	    <div class="tbox" id="mini_tbox2" tab-load="done">
+	    	<div class="row">
+	        	<div class="label_select">
+			        <div class="field_text">战败原因：</div>
+			        <select class="z-select" data-field="giveupcause" name="giveupcause" data-skin="require">
+			        	<option value="">请选择战败原因</option>
+			        	<option value="1">促销不够</option>
+			        	<option value="2">地域原因</option>
+			        </select>
+			    </div>
+		    	<div class="label_select">
+			        <div class="field_text">战败原因分析：</div>
+			        <input type="text" class="input-text require" data-field="failurereason" value="" style="width:429px;"/>
+			    </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+    Core.Tbox.load($('#dialog_mini_tabs'));
+    var GroupSwitch = {
+		toHide: function(group){
+	    	if(group.length>0){
+	    		group.each(function(index,item){
+	    			if(!group.eq(index).hasClass('checked')){
+	    				group.eq(index).find('input.input-text').attr('disabled',true);
+	    				group.eq(index).find('textarea.input-text').attr('disabled',true);
+	    				group.eq(index).find('.z-select').each(function(){
+	    					$(this).setZsDisabled(true);
+	    				});
+	    			}
+	    		});
+	    	}
+	    },
+ 		toShow: function(group){
+	    	if(group.length>0){
+	    		group.each(function(index,item){
+	    			if(group.eq(index).hasClass('checked')){
+	    				group.eq(index).find('input.input-text').removeAttr('disabled');
+	    				group.eq(index).find('textarea.input-text').removeAttr('disabled');
+	    				group.eq(index).find('.z-select').each(function(){
+	    					var dataSkin = $(this).attr('data-skin');
+	    					if(typeof dataSkin!='undefined' && dataSkin.indexOf('zs-disabled')>-1){
+	    						return;
+	    					}else{
+	    						$(this).setZsDisabled(false);
+	    					}
+	    				});
+	    			}
+	    		});
+	    	}
+		}
+    }
+    GroupSwitch.toHide($('.field_group'));
+
+    $('.field_group').on('click','.chk_state',function(){
+    	var _t = $(this).parents('.field_group');
+    	if(_t.find('.chk_bar').hasClass('disib')){ return;}
+    	if(_t.hasClass('checked')){
+    		if(_t.attr('field-key') == 'group2'){
+    			$('.field_group').removeClass('checked');
+    			GroupSwitch.toHide($('.field_group'));
+    			return;
+    		}
+    		_t.removeClass('checked');
+    		GroupSwitch.toHide(_t);
+    	}else{
+    		if(_t.attr('field-key') == 'group2'){
+    			var gp1 = $('.field_group[field-key="group1"]');
+    			if(gp1.find('.chk_bar').hasClass('disib')){
+    				_t.addClass('checked');
+    				GroupSwitch.toShow(_t);
+    				return;
+    			}
+    			$('.field_group').addClass('checked');
+    			GroupSwitch.toShow($('.field_group'));
+    			return;
+    		}
+    		_t.addClass('checked');
+    		GroupSwitch.toShow(_t);
+    	}
+    })
+})
+</script>
