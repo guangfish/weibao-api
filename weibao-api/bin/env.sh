@@ -23,7 +23,7 @@ if [ -d "$SERVER_HOME/target/src/classes" ] ; then
 fi
 
 . ${PRGDIR}/startup.properties
-
+ 
 if [ "${env_heap}" != '' ]; then
 	HEAP_MEMORY=${env_heap}
 else

@@ -6,7 +6,7 @@ SERVER_HOME=$(echo `readlink -f $PRGDIR` | sed 's/\/bin//')
 . "$SERVER_HOME/bin/env.sh"
 if [ -n "$PROID" ]; then
 	echo "${MODULE} is running."
-else
+else 
 	
 	if [ ! -d "$SERVER_HOME/logs/pids.log" ] ; then
 		mkdir -p $SERVER_HOME/logs/pids.log

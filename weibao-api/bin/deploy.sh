@@ -11,5 +11,5 @@ SERVER_HOME=$(echo `readlink -f $PRGDIR` | sed 's/\/bin//')
 cd $SERVER_HOME
 #svn up
 git pull
-ant compile
+ant compile 
 exit 0

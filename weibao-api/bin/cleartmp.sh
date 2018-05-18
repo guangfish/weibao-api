@@ -3,7 +3,7 @@
 cd `dirname $0`/..
 BASE=`pwd`
 
-PROJECT_PATH=$BASE
+PROJECT_PATH=$BASE 
 
 . "$BASE/bin/setenv.sh"
 
