@@ -11,6 +11,22 @@
 	    <div class="field_text">渠道名称：</div>
 	    <input class="input-text w420 require" data-field="channelname" name="channelname" value="${channelname?if_exists}" placeholder="请输入渠道名称" />
 	</div>
+	<div class="row">    
+	    <div class="label_select">
+	        <div class="field_text">省份：</div>
+	        <select class="z-select" data-field="province" name="province"></select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">城市：</div>
+	    	<select class="z-select" data-field="city" name="city"></select>
+	    </div>
+	    <input type="hidden" data-field="province_name" name="province_name" />
+        <input type="hidden" data-field="city_name" name="city_name" />
+	</div>
+	<div class="row">
+	    <div class="field_text">具体地址：</div>
+	    <textarea class="input-text w420" data-field="address" value="${address?if_exists}" name="address"></textarea>
+	</div>
 	<div class="row">
 	    <label>
 	        <div class="field_text">渠道密码：</div>
@@ -21,13 +37,9 @@
 	<div class="row">
 	    <label>
 	        <div class="field_text">有效期：</div>
-	        <input class="input-text date-ico" data-field="validtime" name="validtime" value="${validtime?if_exists}" onclick="WdatePicker()" readonly="readonly" placeholder="有效期" />
+	        <input class="input-text date-ico require" data-field="validtime" name="validtime" value="${validtime?if_exists}" onclick="WdatePicker()" readonly="readonly" placeholder="有效期" />
 	    </label>
-	</div>
-	<div class="row">
-	    <div class="field_text">具体地址：</div>
-	    <textarea class="input-text w420" data-field="address" value="${address?if_exists}" name="address"></textarea>
-	</div>
+	</div>	
 	<div class="row">
 	    <label>
 	        <div class="field_text">联系人：</div>
@@ -51,14 +63,42 @@ function createAppSecret(){
 }
 $(function(){
 	Core.InitSelect($('.dialog_box'));
+	//初始化省份城市数据
+    $.zSelectGroup([{
+        elem: $('select[data-field="province"]'),
+        setValue:'${province?if_exists}', //回填值
+        valueField: 'id',
+        textField: 'name',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        url: '/api/district?level=1',
+        dataFitler: function(result) {
+            return result.rows;
+        }
+    }, {
+        elem: $('select[data-field="city"]'),
+        setValue:'${city?if_exists}', //回填值
+        valueField: 'id',
+        textField: 'name',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        url: '/api/district?level=2&pid=@parentValue',
+        dataFitler: function(result) {
+            return result.rows;
+        }
+    }]);
+    
+    $('select[data-field="province"], select[data-field="city"]').on('setZsValue', function(){
+        var _this = $(this);
+        if(!_this.getZsValue()){ return;}
+        $('input[data-field="'+_this.attr('data-field')+'_name"]').val(_this.zsGetBox().find('.zs-value').text());
+    });
 
     Core.Form.submit({
         form: $('#myDemoDialog'), //form
         url: '/api/channel/save', //提交url
         successfun: function(result){
            $('.cancle').click();
-           //$('.pagination-load').click();
-           window.location.reload();
+           //window.location.reload();
+           Core.Easyui.dom.datagrid('reload');
         },errorfun: function(error){
         }
     },function(form){

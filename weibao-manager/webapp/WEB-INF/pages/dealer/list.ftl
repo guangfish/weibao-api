@@ -31,7 +31,7 @@
             <select class="z-select search_key" name="searchcondition">
                 <option value="dealername">经销商名称</option>
                 <option value="brand">品牌</option>
-                <!--<option value="province-city">省份-城市</option> -->
+                <option value="province-city">省份-城市</option>
             </select>
         </div><div class="req_value search_write_box" attr-box>
             <input class="input-text search_write" placeholder="请输入关键词" name="" />
@@ -56,6 +56,8 @@ Core.Easyui.FieldColumn = [
     {field:'ck',checkbox:true},
     {field:'id',title:'经销商ID',width:100,align:'center'},
     {field:'name',title:'经销商名称',width:100,align:'center'},
+    {field:'provinceName',title:'省份',width:100,align:'center'},
+    {field:'cityName',title:'城市',width:100,align:'center'},
     {field:'address',title:'经销商地址',width:180,align:'center'},
     {field:'brand',title:'品牌',width:100,align:'center'},
     {field:'dmsAccount',title:'DMS账号',width:100,align:'center'},
@@ -68,7 +70,7 @@ Core.Easyui.init({
     grid: $('#datalist'), //datagrid table
     sbar: $('.search_form'), //datagrid search form
 },Core.Easyui.FieldColumn,{
-    idField: 'tid',
+    //idField: 'tid',
     fitColumns: true,
     onLoadSuccess:function(data){ 
     },
@@ -96,7 +98,8 @@ $(document).ready(function(){
         // setValue:'21',
         valueField: 'id',
         textField: 'name',
-        url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        url: '/api/district?level=1',
         dataFitler: function(result) {
             return result.rows;
         }
@@ -105,7 +108,8 @@ $(document).ready(function(){
         // setValue:'121',
         valueField: 'id',
         textField: 'name',
-        url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        url: '/api/district?level=2&pid=@parentValue',
         dataFitler: function(result) {
             return result.rows;
         }

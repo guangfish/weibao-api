@@ -33,16 +33,10 @@
                 <option value="channelname">渠道名称</option>
                 <!--<option value="contacts">联系人</option>-->
                 <!--<option value="mobile">联系电话</option>-->
-                <!--<option value="province-city">省份-城市</option> -->
+                <option value="province-city">省份-城市</option>
             </select>
         </div><div class="req_value search_write_box" attr-box>
             <input class="input-text search_write" placeholder="请输入关键词" name="" />
-        </div>
-        <div class="req_value disn search_select_box" attr-box>
-            <select class="z-select search_select" name="infotype">
-                <option value="123">展厅</option>
-                <option value="456">网电销</option>
-            </select>
         </div>
         <div class="req_value disn search_group_box" attr-box>
             <select class="z-select" data-fname="province" name="province" data-prompt="请选择省份"></select>
@@ -62,15 +56,17 @@
 <script type="text/javascript">
 Core.Easyui.FieldColumn = [
     {field:'ck',checkbox:true},
-    {field:'id',title:'渠道ID',width:100,align:'center'},
-    {field:'channelName',title:'渠道名',width:100,align:'center'},
+    {field:'id',title:'渠道ID',width:80,align:'center'},
+    {field:'channelName',title:'渠道名',width:80,align:'center'},
     {field:'appsecret',title:'渠道密匙',width:180,align:'center'},
+    {field:'provinceName',title:'省份',width:100,align:'center'},
+    {field:'cityName',title:'城市',width:100,align:'center'},
     {field:'contacts',title:'联系人',width:100,align:'center'},
     {field:'mobile',title:'联系方式',width:100,align:'center'},
-    {field:'validTime',title:'有效期',width:100,align:'center',sortable:false,formatter:function(value,row,index){
+    {field:'validTime',title:'有效期',width:120,align:'center',sortable:false,formatter:function(value,row,index){
         return formatDateTime(value);
     }},
-    {field:'createTime',title:'创建时间',width:100,align:'center',sortable:false,formatter:function(value,row,index){
+    {field:'createTime',title:'创建时间',width:120,align:'center',sortable:false,formatter:function(value,row,index){
         return formatDateTime(value);
     }}
 ];
@@ -78,7 +74,7 @@ Core.Easyui.init({
     grid: $('#datalist'), //datagrid table
     sbar: $('.search_form'), //datagrid search form
 },Core.Easyui.FieldColumn,{
-    idField: 'tid',
+    //idField: 'tid',
     fitColumns: true,
     onLoadSuccess:function(data){ 
     },
@@ -106,7 +102,8 @@ $(document).ready(function(){
         // setValue:'21',
         valueField: 'id',
         textField: 'name',
-        url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        url: '/api/district?level=1',
         dataFitler: function(result) {
             return result.rows;
         }
@@ -115,7 +112,8 @@ $(document).ready(function(){
         // setValue:'121',
         valueField: 'id',
         textField: 'name',
-        url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        url: '/api/district?level=2&pid=@parentValue',
         dataFitler: function(result) {
             return result.rows;
         }
@@ -182,7 +180,7 @@ $(document).ready(function(){
         Core.Dialog.open({
             'title': '添加渠道',
             'width':'590px',
-            'height':'300px',
+            'height':'400px',
             'url':'/channel/addoredit'
         })
     }
@@ -190,7 +188,7 @@ $(document).ready(function(){
         Core.Dialog.open({
             'title': '编辑渠道',
             'width':'590px',
-            'height':'320px',
+            'height':'400px',
             'url':'/channel/addoredit?id='+ids
         })
     }

@@ -11,6 +11,18 @@
 	    <div class="field_text">经销商名称：</div>
 	    <input class="input-text w420 require" data-field="name" name="name" value="${name?if_exists}" placeholder="请输入经销商名称" />
 	</div>
+	<div class="row">    
+	    <div class="label_select">
+	        <div class="field_text">省份：</div>
+	        <select class="z-select" data-field="province" name="province"></select>
+	    </div>
+	    <div class="label_select">
+	        <div class="field_text">城市：</div>
+	    	<select class="z-select" data-field="city" name="city"></select>
+	    </div>
+	    <input type="hidden" data-field="province_name" name="province_name" />
+        <input type="hidden" data-field="city_name" name="city_name" />
+	</div>
 	<div class="row">
 	    <label>
 	        <div class="field_text">经销商地址：</div>
@@ -39,18 +51,46 @@
 <script type="text/javascript">
 $(function(){
 	Core.InitSelect($('.dialog_box'));
+	//初始化省份城市数据
+    $.zSelectGroup([{
+        elem: $('select[data-field="province"]'),
+        setValue:'${province?if_exists}', //回填值
+        valueField: 'id',
+        textField: 'name',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=1',
+        url: '/api/district?level=1',
+        dataFitler: function(result) {
+            return result.rows;
+        }
+    }, {
+        elem: $('select[data-field="city"]'),
+        setValue:'${city?if_exists}', //回填值
+        valueField: 'id',
+        textField: 'name',
+        //url: '${request.contextPath}/static/dist/resource/jsondata/new4s_xs_province.json?level=2&pid=@parentValue',
+        url: '/api/district?level=2&pid=@parentValue',
+        dataFitler: function(result) {
+            return result.rows;
+        }
+    }]);
+    
+    $('select[data-field="province"], select[data-field="city"]').on('setZsValue', function(){
+        var _this = $(this);
+        if(!_this.getZsValue()){ return;}
+        $('input[data-field="'+_this.attr('data-field')+'_name"]').val(_this.zsGetBox().find('.zs-value').text());
+    });
 
     Core.Form.submit({
         form: $('#myDemoDialog'), //form
         url: '/api/dealer/save', //提交url
         successfun: function(result){
            if(result=="false"){
-             alert("该经销商已存在，请勿重复提交！");
+             Core.Dialog.msg("该经销商已存在，请勿重复提交！");
              return;
            }
            $('.cancle').click();
-           //$('.pagination-load').click();
-           window.location.reload();
+           //window.location.reload();
+           Core.Easyui.dom.datagrid('reload');
         },errorfun: function(error){
         }
     },function(form){

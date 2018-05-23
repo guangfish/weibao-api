@@ -1,0 +1,71 @@
+/*pager begin*/
+.pager {
+  text-align: center;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.pager a {
+  cursor: pointer;
+}
+.pager a,
+.pager span {
+  width: 22px;
+  height: 23px;
+  border: 1px #cccccc solid;
+  margin-left: -1px;
+  color: #8a8a8a;
+  display: inline-block;
+  line-height: 23px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+.pager a:hover {
+  background-color: #00c1de;
+  color: #fff;
+  border-color: #00c1de;
+  position: relative;
+  z-index: 1;
+}
+.pager span.current {
+  color: #00c1de;
+  border: 0;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.pager .pg-first,
+.pager .pg-prev,
+.pager .pg-next,
+.pager .pg-last {
+  background: url(../image/page_bg.jpg) 0 0 no-repeat;
+}
+.pager .pg-first:hover,
+.pager .pg-prev:hover,
+.pager .pg-next:hover,
+.pager .pg-last:hover {
+  background: url(../image/page_bg_hover.jpg) 0 0 no-repeat;
+}
+.pager .pg-prev,
+.pager .pg-prev:hover {
+  background-position: -4px -30px;
+}
+.pager .pg-next,
+.pager .pg-next:hover {
+  background-position: -34.5px -30px;
+}
+.pager .pg-prev[disabled='true'],
+.pager .pg-prev[disabled='true']:hover {
+  background-image: url(../image/page_bg.jpg);
+  border-color: #eeeeee;
+}
+.pager .pg-next[disabled='true'],
+.pager .pg-next[disabled='true']:hover {
+  background-image: url(../image/page_bg.jpg);
+  border-color: #eeeeee;
+}
+.pager .pg-last,
+.pager .pg-last:hover {
+  background-position: -29px 0;
+}
+/*pager end*/

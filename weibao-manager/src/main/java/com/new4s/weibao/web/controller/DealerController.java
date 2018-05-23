@@ -14,12 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.new4s.weibao.common.web.PageConst;
-import com.new4s.weibao.entity.Channel;
 import com.new4s.weibao.entity.DealerInfo;
-import com.new4s.weibao.service.IChannelService;
 import com.new4s.weibao.service.IDealerInfoService;
-import com.new4s.weibao.util.DateUtil;
-import com.new4s.weibao.util.StringUtil;
 import com.new4s.weibao.vo.web.SearchDataVo;
 import com.new4s.weibao.web.BasicController;
 import com.new4s.weibao.web.controller.vo.JsonResult;
@@ -67,7 +63,9 @@ public class DealerController extends BasicController {
 			@RequestParam(value = "id", required = false) Integer dealerId,
 			@RequestParam(value = "name", required = false) String name,
 			@RequestParam(value = "province", required = false) String province,
+			@RequestParam(value = "province_name", required = false) String provinceName,
 			@RequestParam(value = "city", required = false) String city,
+			@RequestParam(value = "city_name", required = false) String cityName,
 			@RequestParam(value = "address", required = false) String address,
 			@RequestParam(value = "brand", required = false) String brand,
 			@RequestParam(value = "dmsaccount", required = false) String dmsAccount,
@@ -75,18 +73,20 @@ public class DealerController extends BasicController {
 
 		DealerInfo dealerInfo = new DealerInfo();
 		if (dealerId != null) {
-			dealerInfo.setId(dealerId);
+			dealerInfo=dealerInfoService.selectById(dealerId);
 		} else {
 			dealerInfo.setCreateTime(new Date());
 		}
 		dealerInfo.setName(name);
 		dealerInfo.setProvince(province);
+		dealerInfo.setProvinceName(provinceName);
 		dealerInfo.setCity(city);
+		dealerInfo.setCityName(cityName);
 		dealerInfo.setAddress(address);
 		dealerInfo.setBrand(brand);
 		dealerInfo.setDmsAccount(dmsAccount);
 		dealerInfo.setDmsPassword(dmsPassword);
-
+		dealerInfo.setUpdateTime(new Date());
 		try {
 			if (dealerId != null) {
 				dealerInfoService.update(dealerInfo);
@@ -104,7 +104,9 @@ public class DealerController extends BasicController {
 	@RequestMapping(value = "/api/dealer/list", method = { RequestMethod.GET, RequestMethod.POST })
 	public JsonResult getChannelList(@RequestParam(value = "searchcondition", required = false) String searchCondition,
 			@RequestParam(value = "dealername", required = false) String name,
-			@RequestParam(value = "brand", required = false) String brand) {
+			@RequestParam(value = "brand", required = false) String brand,
+			@RequestParam(value = "province", required = false) String province,
+			@RequestParam(value = "city", required = false) String city) {
 		SearchDataVo vo = SearchUtil.getVo();
 		JsonResult result = new JsonResult();
 		if (searchCondition != null) {
@@ -113,7 +115,16 @@ public class DealerController extends BasicController {
 					vo.putSearchParam("name", name, name);
 				}
 			} else if ("brand".equals(searchCondition)) {
-				vo.putSearchParam("brand", brand, brand);
+				if(brand != null){
+					vo.putSearchParam("brand", brand, brand);
+				}				
+			}else if("province-city".equals(searchCondition)){
+				if (province != null) {
+					vo.putSearchParam("province", province, province);
+				}
+				if (city != null) {
+					vo.putSearchParam("city", city, city);
+				}
 			}
 		}
 		dealerInfoService.selectDealerList(vo);

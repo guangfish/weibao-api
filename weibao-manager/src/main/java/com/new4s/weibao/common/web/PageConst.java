@@ -34,5 +34,8 @@ public class PageConst {
 	public static final String DATA_LIST = "data/list";
 	public static final String DATA_LIST_DETAIL = "data/list-detail";
 	
+	/** OpenAPI ***/
+	public static final String API_LIST = "api/list";
+	
 
 }

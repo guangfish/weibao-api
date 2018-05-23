@@ -103,10 +103,10 @@
 
 <script type="text/javascript">
 Core.Easyui.FieldColumn = [
-    {field:'ck',checkbox:true},
+    //{field:'ck',checkbox:true},
     {field:'orderId',title:'订单号',width:200,align:'center'},
     {field:'vin',title:'查询车架号(VIN)',width:160,align:'center'},
-     {field:'dealerName',title:'经销商',width:160,align:'center'},
+    {field:'dealerName',title:'经销商',width:160,align:'center'},
     {field:'brandName',title:'品牌名称',width:160,align:'center'},  
     {field:'channelName',title:'渠道名称',width:160,align:'center'},
     {title:'查询结果',field:'status',width:160,align:'center',formatter:function(value,row,index){

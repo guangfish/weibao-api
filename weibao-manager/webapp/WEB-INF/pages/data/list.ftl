@@ -73,7 +73,7 @@
 
 <script type="text/javascript">
 Core.Easyui.FieldColumn = [
-    {field:'ck',checkbox:true},
+    //{field:'ck',checkbox:true},
     {field:'channelName',title:'渠道简称',width:160,align:'center'},
     {field:'total',title:'查询总次数',width:160,align:'center'},
     {field:'success',title:'成功次数',width:160,align:'center'},

@@ -63,6 +63,8 @@ public class ChannelController extends BasicController {
 			model.addAttribute("channelname", channel.getChannelName());
 			model.addAttribute("appsecret", channel.getAppsecret());
 			model.addAttribute("validtime", DateUtil.dateFormate(channel.getValidTime(), DateUtil.CHINESE_PATTERN));
+			model.addAttribute("province", channel.getProvince());
+			model.addAttribute("city", channel.getCity());
 			model.addAttribute("address", channel.getAddress());
 			model.addAttribute("contacts", channel.getContacts());
 			model.addAttribute("mobile", channel.getMobile());
@@ -80,13 +82,17 @@ public class ChannelController extends BasicController {
 			@RequestParam(value = "channelname", required = false) String channelName,
 			@RequestParam(value = "appsecret", required = false) String appsecret,
 			@RequestParam(value = "validtime", required = false) String validTime,
+			@RequestParam(value = "province", required = false) String province,
+			@RequestParam(value = "province_name", required = false) String provinceName,
+			@RequestParam(value = "city", required = false) String city,
+			@RequestParam(value = "city_name", required = false) String cityName,
 			@RequestParam(value = "address", required = false) String address,
 			@RequestParam(value = "people", required = false) String contacts,
 			@RequestParam(value = "mobile", required = false) String mobile) {
 
 		Channel channel = new Channel();
 		if (channelId != null) {
-			channel.setId(channelId);
+			channel = channelService.selectByID(channelId);
 		} else {
 			channel.setCreateTime(new Date());
 		}
@@ -97,6 +103,18 @@ public class ChannelController extends BasicController {
 		channel.setUpdateTime(new Date());
 		if (validTime != null) {
 			channel.setValidTime(DateUtil.getDate(validTime));
+		}
+		if (province != null) {
+			channel.setProvince(province);
+		}
+		if (provinceName != null) {
+			channel.setProvinceName(provinceName);
+		}
+		if (city != null) {
+			channel.setCity(city);
+		}
+		if (cityName != null) {
+			channel.setCityName(cityName);
 		}
 		if (address != null) {
 			channel.setAddress(address);
@@ -112,13 +130,22 @@ public class ChannelController extends BasicController {
 	@ResponseBody
 	@RequestMapping(value = "/api/channel/list", method = { RequestMethod.GET, RequestMethod.POST })
 	public JsonResult getChannelList(@RequestParam(value = "searchcondition", required = false) String searchCondition,
-			@RequestParam(value = "channelname", required = false) String channelName) {
+			@RequestParam(value = "channelname", required = false) String channelName,
+			@RequestParam(value = "province", required = false) String province,
+			@RequestParam(value = "city", required = false) String city) {
 		SearchDataVo vo = SearchUtil.getVo();
 		JsonResult result = new JsonResult();
 		if (searchCondition != null) {
 			if ("channelname".equals(searchCondition)) {
 				if (channelName != null) {
 					vo.putSearchParam("channelName", channelName, channelName);
+				}
+			} else if ("province-city".equals(searchCondition)) {
+				if (province != null) {
+					vo.putSearchParam("province", province, province);
+				}
+				if (city != null) {
+					vo.putSearchParam("city", city, city);
 				}
 			}
 		}
